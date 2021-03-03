@@ -1,7 +1,7 @@
 // Code generated - DO NOT EDIT.
 // This file is a generated binding and any manual changes will be lost.
 
-package Proposal
+package contracts
 
 import (
 	"math/big"
@@ -26,107 +26,107 @@ var (
 	_ = event.NewSubscription
 )
 
-// ProposalABI is the input ABI used to generate the binding from.
-const ProposalABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogCreateProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogPassProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRejectProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogSetUnpassed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogVote\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"MaxValidators\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MinimalStakingCoin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ProposalAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PunishContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"StakingLockPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ValidatorContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WithdrawProfitPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"pass\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proposalLastingPeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"proposals\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"createTime\",\"type\":\"uint256\"},{\"internalType\":\"uint16\",\"name\":\"agree\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"reject\",\"type\":\"uint16\"},{\"internalType\":\"bool\",\"name\":\"resultExist\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"votes\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"voteTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"vals\",\"type\":\"address[]\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"createProposal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"}],\"name\":\"voteProposal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"setUnpassed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
+// ContractsABI is the input ABI used to generate the binding from.
+const ContractsABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogCreateProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogPassProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRejectProposal\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogSetUnpassed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogVote\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"MaxValidators\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MinimalStakingCoin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ProposalAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PunishContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"StakingLockPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ValidatorContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WithdrawProfitPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"pass\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proposalLastingPeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"proposals\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"createTime\",\"type\":\"uint256\"},{\"internalType\":\"uint16\",\"name\":\"agree\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"reject\",\"type\":\"uint16\"},{\"internalType\":\"bool\",\"name\":\"resultExist\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"votes\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"voteTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"vals\",\"type\":\"address[]\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"createProposal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"auth\",\"type\":\"bool\"}],\"name\":\"voteProposal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"setUnpassed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
 
-// Proposal is an auto generated Go binding around an Ethereum contract.
-type Proposal struct {
-	ProposalCaller     // Read-only binding to the contract
-	ProposalTransactor // Write-only binding to the contract
-	ProposalFilterer   // Log filterer for contract events
+// Contracts is an auto generated Go binding around an Ethereum contract.
+type Contracts struct {
+	ContractsCaller     // Read-only binding to the contract
+	ContractsTransactor // Write-only binding to the contract
+	ContractsFilterer   // Log filterer for contract events
 }
 
-// ProposalCaller is an auto generated read-only Go binding around an Ethereum contract.
-type ProposalCaller struct {
+// ContractsCaller is an auto generated read-only Go binding around an Ethereum contract.
+type ContractsCaller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ProposalTransactor is an auto generated write-only Go binding around an Ethereum contract.
-type ProposalTransactor struct {
+// ContractsTransactor is an auto generated write-only Go binding around an Ethereum contract.
+type ContractsTransactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ProposalFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
-type ProposalFilterer struct {
+// ContractsFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
+type ContractsFilterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ProposalSession is an auto generated Go binding around an Ethereum contract,
+// ContractsSession is an auto generated Go binding around an Ethereum contract,
 // with pre-set call and transact options.
-type ProposalSession struct {
-	Contract     *Proposal         // Generic contract binding to set the session for
+type ContractsSession struct {
+	Contract     *Contracts        // Generic contract binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ProposalCallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// ContractsCallerSession is an auto generated read-only Go binding around an Ethereum contract,
 // with pre-set call options.
-type ProposalCallerSession struct {
-	Contract *ProposalCaller // Generic contract caller binding to set the session for
-	CallOpts bind.CallOpts   // Call options to use throughout this session
+type ContractsCallerSession struct {
+	Contract *ContractsCaller // Generic contract caller binding to set the session for
+	CallOpts bind.CallOpts    // Call options to use throughout this session
 }
 
-// ProposalTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// ContractsTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
 // with pre-set transact options.
-type ProposalTransactorSession struct {
-	Contract     *ProposalTransactor // Generic contract transactor binding to set the session for
-	TransactOpts bind.TransactOpts   // Transaction auth options to use throughout this session
+type ContractsTransactorSession struct {
+	Contract     *ContractsTransactor // Generic contract transactor binding to set the session for
+	TransactOpts bind.TransactOpts    // Transaction auth options to use throughout this session
 }
 
-// ProposalRaw is an auto generated low-level Go binding around an Ethereum contract.
-type ProposalRaw struct {
-	Contract *Proposal // Generic contract binding to access the raw methods on
+// ContractsRaw is an auto generated low-level Go binding around an Ethereum contract.
+type ContractsRaw struct {
+	Contract *Contracts // Generic contract binding to access the raw methods on
 }
 
-// ProposalCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
-type ProposalCallerRaw struct {
-	Contract *ProposalCaller // Generic read-only contract binding to access the raw methods on
+// ContractsCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+type ContractsCallerRaw struct {
+	Contract *ContractsCaller // Generic read-only contract binding to access the raw methods on
 }
 
-// ProposalTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
-type ProposalTransactorRaw struct {
-	Contract *ProposalTransactor // Generic write-only contract binding to access the raw methods on
+// ContractsTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+type ContractsTransactorRaw struct {
+	Contract *ContractsTransactor // Generic write-only contract binding to access the raw methods on
 }
 
-// NewProposal creates a new instance of Proposal, bound to a specific deployed contract.
-func NewProposal(address common.Address, backend bind.ContractBackend) (*Proposal, error) {
-	contract, err := bindProposal(address, backend, backend, backend)
+// NewContracts creates a new instance of Contracts, bound to a specific deployed contract.
+func NewContracts(address common.Address, backend bind.ContractBackend) (*Contracts, error) {
+	contract, err := bindContracts(address, backend, backend, backend)
 	if err != nil {
 		return nil, err
 	}
-	return &Proposal{ProposalCaller: ProposalCaller{contract: contract}, ProposalTransactor: ProposalTransactor{contract: contract}, ProposalFilterer: ProposalFilterer{contract: contract}}, nil
+	return &Contracts{ContractsCaller: ContractsCaller{contract: contract}, ContractsTransactor: ContractsTransactor{contract: contract}, ContractsFilterer: ContractsFilterer{contract: contract}}, nil
 }
 
-// NewProposalCaller creates a new read-only instance of Proposal, bound to a specific deployed contract.
-func NewProposalCaller(address common.Address, caller bind.ContractCaller) (*ProposalCaller, error) {
-	contract, err := bindProposal(address, caller, nil, nil)
+// NewContractsCaller creates a new read-only instance of Contracts, bound to a specific deployed contract.
+func NewContractsCaller(address common.Address, caller bind.ContractCaller) (*ContractsCaller, error) {
+	contract, err := bindContracts(address, caller, nil, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalCaller{contract: contract}, nil
+	return &ContractsCaller{contract: contract}, nil
 }
 
-// NewProposalTransactor creates a new write-only instance of Proposal, bound to a specific deployed contract.
-func NewProposalTransactor(address common.Address, transactor bind.ContractTransactor) (*ProposalTransactor, error) {
-	contract, err := bindProposal(address, nil, transactor, nil)
+// NewContractsTransactor creates a new write-only instance of Contracts, bound to a specific deployed contract.
+func NewContractsTransactor(address common.Address, transactor bind.ContractTransactor) (*ContractsTransactor, error) {
+	contract, err := bindContracts(address, nil, transactor, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalTransactor{contract: contract}, nil
+	return &ContractsTransactor{contract: contract}, nil
 }
 
-// NewProposalFilterer creates a new log filterer instance of Proposal, bound to a specific deployed contract.
-func NewProposalFilterer(address common.Address, filterer bind.ContractFilterer) (*ProposalFilterer, error) {
-	contract, err := bindProposal(address, nil, nil, filterer)
+// NewContractsFilterer creates a new log filterer instance of Contracts, bound to a specific deployed contract.
+func NewContractsFilterer(address common.Address, filterer bind.ContractFilterer) (*ContractsFilterer, error) {
+	contract, err := bindContracts(address, nil, nil, filterer)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalFilterer{contract: contract}, nil
+	return &ContractsFilterer{contract: contract}, nil
 }
 
-// bindProposal binds a generic wrapper to an already deployed contract.
-func bindProposal(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := abi.JSON(strings.NewReader(ProposalABI))
+// bindContracts binds a generic wrapper to an already deployed contract.
+func bindContracts(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
+	parsed, err := abi.JSON(strings.NewReader(ContractsABI))
 	if err != nil {
 		return nil, err
 	}
@@ -137,46 +137,46 @@ func bindProposal(address common.Address, caller bind.ContractCaller, transactor
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Proposal *ProposalRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Proposal.Contract.ProposalCaller.contract.Call(opts, result, method, params...)
+func (_Contracts *ContractsRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _Contracts.Contract.ContractsCaller.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Proposal *ProposalRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Proposal.Contract.ProposalTransactor.contract.Transfer(opts)
+func (_Contracts *ContractsRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Contracts.Contract.ContractsTransactor.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Proposal *ProposalRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Proposal.Contract.ProposalTransactor.contract.Transact(opts, method, params...)
+func (_Contracts *ContractsRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _Contracts.Contract.ContractsTransactor.contract.Transact(opts, method, params...)
 }
 
 // Call invokes the (constant) contract method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Proposal *ProposalCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Proposal.Contract.contract.Call(opts, result, method, params...)
+func (_Contracts *ContractsCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _Contracts.Contract.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Proposal *ProposalTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Proposal.Contract.contract.Transfer(opts)
+func (_Contracts *ContractsTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Contracts.Contract.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Proposal *ProposalTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Proposal.Contract.contract.Transact(opts, method, params...)
+func (_Contracts *ContractsTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _Contracts.Contract.contract.Transact(opts, method, params...)
 }
 
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Proposal *ProposalCaller) MaxValidators(opts *bind.CallOpts) (uint16, error) {
+func (_Contracts *ContractsCaller) MaxValidators(opts *bind.CallOpts) (uint16, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "MaxValidators")
+	err := _Contracts.contract.Call(opts, &out, "MaxValidators")
 
 	if err != nil {
 		return *new(uint16), err
@@ -191,23 +191,23 @@ func (_Proposal *ProposalCaller) MaxValidators(opts *bind.CallOpts) (uint16, err
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Proposal *ProposalSession) MaxValidators() (uint16, error) {
-	return _Proposal.Contract.MaxValidators(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) MaxValidators() (uint16, error) {
+	return _Contracts.Contract.MaxValidators(&_Contracts.CallOpts)
 }
 
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Proposal *ProposalCallerSession) MaxValidators() (uint16, error) {
-	return _Proposal.Contract.MaxValidators(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) MaxValidators() (uint16, error) {
+	return _Contracts.Contract.MaxValidators(&_Contracts.CallOpts)
 }
 
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Proposal *ProposalCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big.Int, error) {
+func (_Contracts *ContractsCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "MinimalStakingCoin")
+	err := _Contracts.contract.Call(opts, &out, "MinimalStakingCoin")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -222,23 +222,23 @@ func (_Proposal *ProposalCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big.I
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Proposal *ProposalSession) MinimalStakingCoin() (*big.Int, error) {
-	return _Proposal.Contract.MinimalStakingCoin(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) MinimalStakingCoin() (*big.Int, error) {
+	return _Contracts.Contract.MinimalStakingCoin(&_Contracts.CallOpts)
 }
 
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Proposal *ProposalCallerSession) MinimalStakingCoin() (*big.Int, error) {
-	return _Proposal.Contract.MinimalStakingCoin(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) MinimalStakingCoin() (*big.Int, error) {
+	return _Contracts.Contract.MinimalStakingCoin(&_Contracts.CallOpts)
 }
 
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Proposal *ProposalCaller) ProposalAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Contracts *ContractsCaller) ProposalAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "ProposalAddr")
+	err := _Contracts.contract.Call(opts, &out, "ProposalAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -253,23 +253,23 @@ func (_Proposal *ProposalCaller) ProposalAddr(opts *bind.CallOpts) (common.Addre
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Proposal *ProposalSession) ProposalAddr() (common.Address, error) {
-	return _Proposal.Contract.ProposalAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) ProposalAddr() (common.Address, error) {
+	return _Contracts.Contract.ProposalAddr(&_Contracts.CallOpts)
 }
 
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Proposal *ProposalCallerSession) ProposalAddr() (common.Address, error) {
-	return _Proposal.Contract.ProposalAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) ProposalAddr() (common.Address, error) {
+	return _Contracts.Contract.ProposalAddr(&_Contracts.CallOpts)
 }
 
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Proposal *ProposalCaller) PunishContractAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Contracts *ContractsCaller) PunishContractAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "PunishContractAddr")
+	err := _Contracts.contract.Call(opts, &out, "PunishContractAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -284,23 +284,23 @@ func (_Proposal *ProposalCaller) PunishContractAddr(opts *bind.CallOpts) (common
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Proposal *ProposalSession) PunishContractAddr() (common.Address, error) {
-	return _Proposal.Contract.PunishContractAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) PunishContractAddr() (common.Address, error) {
+	return _Contracts.Contract.PunishContractAddr(&_Contracts.CallOpts)
 }
 
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Proposal *ProposalCallerSession) PunishContractAddr() (common.Address, error) {
-	return _Proposal.Contract.PunishContractAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) PunishContractAddr() (common.Address, error) {
+	return _Contracts.Contract.PunishContractAddr(&_Contracts.CallOpts)
 }
 
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Proposal *ProposalCaller) StakingLockPeriod(opts *bind.CallOpts) (uint64, error) {
+func (_Contracts *ContractsCaller) StakingLockPeriod(opts *bind.CallOpts) (uint64, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "StakingLockPeriod")
+	err := _Contracts.contract.Call(opts, &out, "StakingLockPeriod")
 
 	if err != nil {
 		return *new(uint64), err
@@ -315,23 +315,23 @@ func (_Proposal *ProposalCaller) StakingLockPeriod(opts *bind.CallOpts) (uint64,
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Proposal *ProposalSession) StakingLockPeriod() (uint64, error) {
-	return _Proposal.Contract.StakingLockPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) StakingLockPeriod() (uint64, error) {
+	return _Contracts.Contract.StakingLockPeriod(&_Contracts.CallOpts)
 }
 
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Proposal *ProposalCallerSession) StakingLockPeriod() (uint64, error) {
-	return _Proposal.Contract.StakingLockPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) StakingLockPeriod() (uint64, error) {
+	return _Contracts.Contract.StakingLockPeriod(&_Contracts.CallOpts)
 }
 
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Proposal *ProposalCaller) ValidatorContractAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Contracts *ContractsCaller) ValidatorContractAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "ValidatorContractAddr")
+	err := _Contracts.contract.Call(opts, &out, "ValidatorContractAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -346,23 +346,23 @@ func (_Proposal *ProposalCaller) ValidatorContractAddr(opts *bind.CallOpts) (com
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Proposal *ProposalSession) ValidatorContractAddr() (common.Address, error) {
-	return _Proposal.Contract.ValidatorContractAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) ValidatorContractAddr() (common.Address, error) {
+	return _Contracts.Contract.ValidatorContractAddr(&_Contracts.CallOpts)
 }
 
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Proposal *ProposalCallerSession) ValidatorContractAddr() (common.Address, error) {
-	return _Proposal.Contract.ValidatorContractAddr(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) ValidatorContractAddr() (common.Address, error) {
+	return _Contracts.Contract.ValidatorContractAddr(&_Contracts.CallOpts)
 }
 
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Proposal *ProposalCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (uint64, error) {
+func (_Contracts *ContractsCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (uint64, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "WithdrawProfitPeriod")
+	err := _Contracts.contract.Call(opts, &out, "WithdrawProfitPeriod")
 
 	if err != nil {
 		return *new(uint64), err
@@ -377,23 +377,23 @@ func (_Proposal *ProposalCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (uint
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Proposal *ProposalSession) WithdrawProfitPeriod() (uint64, error) {
-	return _Proposal.Contract.WithdrawProfitPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) WithdrawProfitPeriod() (uint64, error) {
+	return _Contracts.Contract.WithdrawProfitPeriod(&_Contracts.CallOpts)
 }
 
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Proposal *ProposalCallerSession) WithdrawProfitPeriod() (uint64, error) {
-	return _Proposal.Contract.WithdrawProfitPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) WithdrawProfitPeriod() (uint64, error) {
+	return _Contracts.Contract.WithdrawProfitPeriod(&_Contracts.CallOpts)
 }
 
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Proposal *ProposalCaller) Initialized(opts *bind.CallOpts) (bool, error) {
+func (_Contracts *ContractsCaller) Initialized(opts *bind.CallOpts) (bool, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "initialized")
+	err := _Contracts.contract.Call(opts, &out, "initialized")
 
 	if err != nil {
 		return *new(bool), err
@@ -408,23 +408,23 @@ func (_Proposal *ProposalCaller) Initialized(opts *bind.CallOpts) (bool, error) 
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Proposal *ProposalSession) Initialized() (bool, error) {
-	return _Proposal.Contract.Initialized(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) Initialized() (bool, error) {
+	return _Contracts.Contract.Initialized(&_Contracts.CallOpts)
 }
 
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Proposal *ProposalCallerSession) Initialized() (bool, error) {
-	return _Proposal.Contract.Initialized(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) Initialized() (bool, error) {
+	return _Contracts.Contract.Initialized(&_Contracts.CallOpts)
 }
 
 // Pass is a free data retrieval call binding the contract method 0x82c4b3b2.
 //
 // Solidity: function pass(address ) view returns(bool)
-func (_Proposal *ProposalCaller) Pass(opts *bind.CallOpts, arg0 common.Address) (bool, error) {
+func (_Contracts *ContractsCaller) Pass(opts *bind.CallOpts, arg0 common.Address) (bool, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "pass", arg0)
+	err := _Contracts.contract.Call(opts, &out, "pass", arg0)
 
 	if err != nil {
 		return *new(bool), err
@@ -439,23 +439,23 @@ func (_Proposal *ProposalCaller) Pass(opts *bind.CallOpts, arg0 common.Address) 
 // Pass is a free data retrieval call binding the contract method 0x82c4b3b2.
 //
 // Solidity: function pass(address ) view returns(bool)
-func (_Proposal *ProposalSession) Pass(arg0 common.Address) (bool, error) {
-	return _Proposal.Contract.Pass(&_Proposal.CallOpts, arg0)
+func (_Contracts *ContractsSession) Pass(arg0 common.Address) (bool, error) {
+	return _Contracts.Contract.Pass(&_Contracts.CallOpts, arg0)
 }
 
 // Pass is a free data retrieval call binding the contract method 0x82c4b3b2.
 //
 // Solidity: function pass(address ) view returns(bool)
-func (_Proposal *ProposalCallerSession) Pass(arg0 common.Address) (bool, error) {
-	return _Proposal.Contract.Pass(&_Proposal.CallOpts, arg0)
+func (_Contracts *ContractsCallerSession) Pass(arg0 common.Address) (bool, error) {
+	return _Contracts.Contract.Pass(&_Contracts.CallOpts, arg0)
 }
 
 // ProposalLastingPeriod is a free data retrieval call binding the contract method 0xe823c814.
 //
 // Solidity: function proposalLastingPeriod() view returns(uint256)
-func (_Proposal *ProposalCaller) ProposalLastingPeriod(opts *bind.CallOpts) (*big.Int, error) {
+func (_Contracts *ContractsCaller) ProposalLastingPeriod(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "proposalLastingPeriod")
+	err := _Contracts.contract.Call(opts, &out, "proposalLastingPeriod")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -470,21 +470,21 @@ func (_Proposal *ProposalCaller) ProposalLastingPeriod(opts *bind.CallOpts) (*bi
 // ProposalLastingPeriod is a free data retrieval call binding the contract method 0xe823c814.
 //
 // Solidity: function proposalLastingPeriod() view returns(uint256)
-func (_Proposal *ProposalSession) ProposalLastingPeriod() (*big.Int, error) {
-	return _Proposal.Contract.ProposalLastingPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsSession) ProposalLastingPeriod() (*big.Int, error) {
+	return _Contracts.Contract.ProposalLastingPeriod(&_Contracts.CallOpts)
 }
 
 // ProposalLastingPeriod is a free data retrieval call binding the contract method 0xe823c814.
 //
 // Solidity: function proposalLastingPeriod() view returns(uint256)
-func (_Proposal *ProposalCallerSession) ProposalLastingPeriod() (*big.Int, error) {
-	return _Proposal.Contract.ProposalLastingPeriod(&_Proposal.CallOpts)
+func (_Contracts *ContractsCallerSession) ProposalLastingPeriod() (*big.Int, error) {
+	return _Contracts.Contract.ProposalLastingPeriod(&_Contracts.CallOpts)
 }
 
 // Proposals is a free data retrieval call binding the contract method 0x32ed5b12.
 //
 // Solidity: function proposals(bytes32 ) view returns(address proposer, address dst, string details, uint256 createTime, uint16 agree, uint16 reject, bool resultExist)
-func (_Proposal *ProposalCaller) Proposals(opts *bind.CallOpts, arg0 [32]byte) (struct {
+func (_Contracts *ContractsCaller) Proposals(opts *bind.CallOpts, arg0 [32]byte) (struct {
 	Proposer    common.Address
 	Dst         common.Address
 	Details     string
@@ -494,7 +494,7 @@ func (_Proposal *ProposalCaller) Proposals(opts *bind.CallOpts, arg0 [32]byte) (
 	ResultExist bool
 }, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "proposals", arg0)
+	err := _Contracts.contract.Call(opts, &out, "proposals", arg0)
 
 	outstruct := new(struct {
 		Proposer    common.Address
@@ -521,7 +521,7 @@ func (_Proposal *ProposalCaller) Proposals(opts *bind.CallOpts, arg0 [32]byte) (
 // Proposals is a free data retrieval call binding the contract method 0x32ed5b12.
 //
 // Solidity: function proposals(bytes32 ) view returns(address proposer, address dst, string details, uint256 createTime, uint16 agree, uint16 reject, bool resultExist)
-func (_Proposal *ProposalSession) Proposals(arg0 [32]byte) (struct {
+func (_Contracts *ContractsSession) Proposals(arg0 [32]byte) (struct {
 	Proposer    common.Address
 	Dst         common.Address
 	Details     string
@@ -530,13 +530,13 @@ func (_Proposal *ProposalSession) Proposals(arg0 [32]byte) (struct {
 	Reject      uint16
 	ResultExist bool
 }, error) {
-	return _Proposal.Contract.Proposals(&_Proposal.CallOpts, arg0)
+	return _Contracts.Contract.Proposals(&_Contracts.CallOpts, arg0)
 }
 
 // Proposals is a free data retrieval call binding the contract method 0x32ed5b12.
 //
 // Solidity: function proposals(bytes32 ) view returns(address proposer, address dst, string details, uint256 createTime, uint16 agree, uint16 reject, bool resultExist)
-func (_Proposal *ProposalCallerSession) Proposals(arg0 [32]byte) (struct {
+func (_Contracts *ContractsCallerSession) Proposals(arg0 [32]byte) (struct {
 	Proposer    common.Address
 	Dst         common.Address
 	Details     string
@@ -545,19 +545,19 @@ func (_Proposal *ProposalCallerSession) Proposals(arg0 [32]byte) (struct {
 	Reject      uint16
 	ResultExist bool
 }, error) {
-	return _Proposal.Contract.Proposals(&_Proposal.CallOpts, arg0)
+	return _Contracts.Contract.Proposals(&_Contracts.CallOpts, arg0)
 }
 
 // Votes is a free data retrieval call binding the contract method 0x1db5ade8.
 //
 // Solidity: function votes(address , bytes32 ) view returns(address voter, uint256 voteTime, bool auth)
-func (_Proposal *ProposalCaller) Votes(opts *bind.CallOpts, arg0 common.Address, arg1 [32]byte) (struct {
+func (_Contracts *ContractsCaller) Votes(opts *bind.CallOpts, arg0 common.Address, arg1 [32]byte) (struct {
 	Voter    common.Address
 	VoteTime *big.Int
 	Auth     bool
 }, error) {
 	var out []interface{}
-	err := _Proposal.contract.Call(opts, &out, "votes", arg0, arg1)
+	err := _Contracts.contract.Call(opts, &out, "votes", arg0, arg1)
 
 	outstruct := new(struct {
 		Voter    common.Address
@@ -576,112 +576,112 @@ func (_Proposal *ProposalCaller) Votes(opts *bind.CallOpts, arg0 common.Address,
 // Votes is a free data retrieval call binding the contract method 0x1db5ade8.
 //
 // Solidity: function votes(address , bytes32 ) view returns(address voter, uint256 voteTime, bool auth)
-func (_Proposal *ProposalSession) Votes(arg0 common.Address, arg1 [32]byte) (struct {
+func (_Contracts *ContractsSession) Votes(arg0 common.Address, arg1 [32]byte) (struct {
 	Voter    common.Address
 	VoteTime *big.Int
 	Auth     bool
 }, error) {
-	return _Proposal.Contract.Votes(&_Proposal.CallOpts, arg0, arg1)
+	return _Contracts.Contract.Votes(&_Contracts.CallOpts, arg0, arg1)
 }
 
 // Votes is a free data retrieval call binding the contract method 0x1db5ade8.
 //
 // Solidity: function votes(address , bytes32 ) view returns(address voter, uint256 voteTime, bool auth)
-func (_Proposal *ProposalCallerSession) Votes(arg0 common.Address, arg1 [32]byte) (struct {
+func (_Contracts *ContractsCallerSession) Votes(arg0 common.Address, arg1 [32]byte) (struct {
 	Voter    common.Address
 	VoteTime *big.Int
 	Auth     bool
 }, error) {
-	return _Proposal.Contract.Votes(&_Proposal.CallOpts, arg0, arg1)
+	return _Contracts.Contract.Votes(&_Contracts.CallOpts, arg0, arg1)
 }
 
 // CreateProposal is a paid mutator transaction binding the contract method 0x1f4f7d29.
 //
 // Solidity: function createProposal(address dst, string details) returns(bool)
-func (_Proposal *ProposalTransactor) CreateProposal(opts *bind.TransactOpts, dst common.Address, details string) (*types.Transaction, error) {
-	return _Proposal.contract.Transact(opts, "createProposal", dst, details)
+func (_Contracts *ContractsTransactor) CreateProposal(opts *bind.TransactOpts, dst common.Address, details string) (*types.Transaction, error) {
+	return _Contracts.contract.Transact(opts, "createProposal", dst, details)
 }
 
 // CreateProposal is a paid mutator transaction binding the contract method 0x1f4f7d29.
 //
 // Solidity: function createProposal(address dst, string details) returns(bool)
-func (_Proposal *ProposalSession) CreateProposal(dst common.Address, details string) (*types.Transaction, error) {
-	return _Proposal.Contract.CreateProposal(&_Proposal.TransactOpts, dst, details)
+func (_Contracts *ContractsSession) CreateProposal(dst common.Address, details string) (*types.Transaction, error) {
+	return _Contracts.Contract.CreateProposal(&_Contracts.TransactOpts, dst, details)
 }
 
 // CreateProposal is a paid mutator transaction binding the contract method 0x1f4f7d29.
 //
 // Solidity: function createProposal(address dst, string details) returns(bool)
-func (_Proposal *ProposalTransactorSession) CreateProposal(dst common.Address, details string) (*types.Transaction, error) {
-	return _Proposal.Contract.CreateProposal(&_Proposal.TransactOpts, dst, details)
+func (_Contracts *ContractsTransactorSession) CreateProposal(dst common.Address, details string) (*types.Transaction, error) {
+	return _Contracts.Contract.CreateProposal(&_Contracts.TransactOpts, dst, details)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Proposal *ProposalTransactor) Initialize(opts *bind.TransactOpts, vals []common.Address) (*types.Transaction, error) {
-	return _Proposal.contract.Transact(opts, "initialize", vals)
+func (_Contracts *ContractsTransactor) Initialize(opts *bind.TransactOpts, vals []common.Address) (*types.Transaction, error) {
+	return _Contracts.contract.Transact(opts, "initialize", vals)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Proposal *ProposalSession) Initialize(vals []common.Address) (*types.Transaction, error) {
-	return _Proposal.Contract.Initialize(&_Proposal.TransactOpts, vals)
+func (_Contracts *ContractsSession) Initialize(vals []common.Address) (*types.Transaction, error) {
+	return _Contracts.Contract.Initialize(&_Contracts.TransactOpts, vals)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Proposal *ProposalTransactorSession) Initialize(vals []common.Address) (*types.Transaction, error) {
-	return _Proposal.Contract.Initialize(&_Proposal.TransactOpts, vals)
+func (_Contracts *ContractsTransactorSession) Initialize(vals []common.Address) (*types.Transaction, error) {
+	return _Contracts.Contract.Initialize(&_Contracts.TransactOpts, vals)
 }
 
 // SetUnpassed is a paid mutator transaction binding the contract method 0x15ea2781.
 //
 // Solidity: function setUnpassed(address val) returns(bool)
-func (_Proposal *ProposalTransactor) SetUnpassed(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
-	return _Proposal.contract.Transact(opts, "setUnpassed", val)
+func (_Contracts *ContractsTransactor) SetUnpassed(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
+	return _Contracts.contract.Transact(opts, "setUnpassed", val)
 }
 
 // SetUnpassed is a paid mutator transaction binding the contract method 0x15ea2781.
 //
 // Solidity: function setUnpassed(address val) returns(bool)
-func (_Proposal *ProposalSession) SetUnpassed(val common.Address) (*types.Transaction, error) {
-	return _Proposal.Contract.SetUnpassed(&_Proposal.TransactOpts, val)
+func (_Contracts *ContractsSession) SetUnpassed(val common.Address) (*types.Transaction, error) {
+	return _Contracts.Contract.SetUnpassed(&_Contracts.TransactOpts, val)
 }
 
 // SetUnpassed is a paid mutator transaction binding the contract method 0x15ea2781.
 //
 // Solidity: function setUnpassed(address val) returns(bool)
-func (_Proposal *ProposalTransactorSession) SetUnpassed(val common.Address) (*types.Transaction, error) {
-	return _Proposal.Contract.SetUnpassed(&_Proposal.TransactOpts, val)
+func (_Contracts *ContractsTransactorSession) SetUnpassed(val common.Address) (*types.Transaction, error) {
+	return _Contracts.Contract.SetUnpassed(&_Contracts.TransactOpts, val)
 }
 
 // VoteProposal is a paid mutator transaction binding the contract method 0xa4c4d922.
 //
 // Solidity: function voteProposal(bytes32 id, bool auth) returns(bool)
-func (_Proposal *ProposalTransactor) VoteProposal(opts *bind.TransactOpts, id [32]byte, auth bool) (*types.Transaction, error) {
-	return _Proposal.contract.Transact(opts, "voteProposal", id, auth)
+func (_Contracts *ContractsTransactor) VoteProposal(opts *bind.TransactOpts, id [32]byte, auth bool) (*types.Transaction, error) {
+	return _Contracts.contract.Transact(opts, "voteProposal", id, auth)
 }
 
 // VoteProposal is a paid mutator transaction binding the contract method 0xa4c4d922.
 //
 // Solidity: function voteProposal(bytes32 id, bool auth) returns(bool)
-func (_Proposal *ProposalSession) VoteProposal(id [32]byte, auth bool) (*types.Transaction, error) {
-	return _Proposal.Contract.VoteProposal(&_Proposal.TransactOpts, id, auth)
+func (_Contracts *ContractsSession) VoteProposal(id [32]byte, auth bool) (*types.Transaction, error) {
+	return _Contracts.Contract.VoteProposal(&_Contracts.TransactOpts, id, auth)
 }
 
 // VoteProposal is a paid mutator transaction binding the contract method 0xa4c4d922.
 //
 // Solidity: function voteProposal(bytes32 id, bool auth) returns(bool)
-func (_Proposal *ProposalTransactorSession) VoteProposal(id [32]byte, auth bool) (*types.Transaction, error) {
-	return _Proposal.Contract.VoteProposal(&_Proposal.TransactOpts, id, auth)
+func (_Contracts *ContractsTransactorSession) VoteProposal(id [32]byte, auth bool) (*types.Transaction, error) {
+	return _Contracts.Contract.VoteProposal(&_Contracts.TransactOpts, id, auth)
 }
 
-// ProposalLogCreateProposalIterator is returned from FilterLogCreateProposal and is used to iterate over the raw logs and unpacked data for LogCreateProposal events raised by the Proposal contract.
-type ProposalLogCreateProposalIterator struct {
-	Event *ProposalLogCreateProposal // Event containing the contract specifics and raw log
+// ContractsLogCreateProposalIterator is returned from FilterLogCreateProposal and is used to iterate over the raw logs and unpacked data for LogCreateProposal events raised by the Contracts contract.
+type ContractsLogCreateProposalIterator struct {
+	Event *ContractsLogCreateProposal // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -695,7 +695,7 @@ type ProposalLogCreateProposalIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ProposalLogCreateProposalIterator) Next() bool {
+func (it *ContractsLogCreateProposalIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -704,7 +704,7 @@ func (it *ProposalLogCreateProposalIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ProposalLogCreateProposal)
+			it.Event = new(ContractsLogCreateProposal)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -719,7 +719,7 @@ func (it *ProposalLogCreateProposalIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ProposalLogCreateProposal)
+		it.Event = new(ContractsLogCreateProposal)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -735,19 +735,19 @@ func (it *ProposalLogCreateProposalIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ProposalLogCreateProposalIterator) Error() error {
+func (it *ContractsLogCreateProposalIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ProposalLogCreateProposalIterator) Close() error {
+func (it *ContractsLogCreateProposalIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ProposalLogCreateProposal represents a LogCreateProposal event raised by the Proposal contract.
-type ProposalLogCreateProposal struct {
+// ContractsLogCreateProposal represents a LogCreateProposal event raised by the Contracts contract.
+type ContractsLogCreateProposal struct {
 	Id       [32]byte
 	Proposer common.Address
 	Dst      common.Address
@@ -758,7 +758,7 @@ type ProposalLogCreateProposal struct {
 // FilterLogCreateProposal is a free log retrieval operation binding the contract event 0xc10f2f4d53a0e342536c6af3cce9c6ee25c32dbb323521ce0e1d4494a3e362e8.
 //
 // Solidity: event LogCreateProposal(bytes32 indexed id, address indexed proposer, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) FilterLogCreateProposal(opts *bind.FilterOpts, id [][32]byte, proposer []common.Address, dst []common.Address) (*ProposalLogCreateProposalIterator, error) {
+func (_Contracts *ContractsFilterer) FilterLogCreateProposal(opts *bind.FilterOpts, id [][32]byte, proposer []common.Address, dst []common.Address) (*ContractsLogCreateProposalIterator, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -773,17 +773,17 @@ func (_Proposal *ProposalFilterer) FilterLogCreateProposal(opts *bind.FilterOpts
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.FilterLogs(opts, "LogCreateProposal", idRule, proposerRule, dstRule)
+	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogCreateProposal", idRule, proposerRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalLogCreateProposalIterator{contract: _Proposal.contract, event: "LogCreateProposal", logs: logs, sub: sub}, nil
+	return &ContractsLogCreateProposalIterator{contract: _Contracts.contract, event: "LogCreateProposal", logs: logs, sub: sub}, nil
 }
 
 // WatchLogCreateProposal is a free log subscription operation binding the contract event 0xc10f2f4d53a0e342536c6af3cce9c6ee25c32dbb323521ce0e1d4494a3e362e8.
 //
 // Solidity: event LogCreateProposal(bytes32 indexed id, address indexed proposer, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) WatchLogCreateProposal(opts *bind.WatchOpts, sink chan<- *ProposalLogCreateProposal, id [][32]byte, proposer []common.Address, dst []common.Address) (event.Subscription, error) {
+func (_Contracts *ContractsFilterer) WatchLogCreateProposal(opts *bind.WatchOpts, sink chan<- *ContractsLogCreateProposal, id [][32]byte, proposer []common.Address, dst []common.Address) (event.Subscription, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -798,7 +798,7 @@ func (_Proposal *ProposalFilterer) WatchLogCreateProposal(opts *bind.WatchOpts, 
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.WatchLogs(opts, "LogCreateProposal", idRule, proposerRule, dstRule)
+	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogCreateProposal", idRule, proposerRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
@@ -808,8 +808,8 @@ func (_Proposal *ProposalFilterer) WatchLogCreateProposal(opts *bind.WatchOpts, 
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ProposalLogCreateProposal)
-				if err := _Proposal.contract.UnpackLog(event, "LogCreateProposal", log); err != nil {
+				event := new(ContractsLogCreateProposal)
+				if err := _Contracts.contract.UnpackLog(event, "LogCreateProposal", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -833,18 +833,18 @@ func (_Proposal *ProposalFilterer) WatchLogCreateProposal(opts *bind.WatchOpts, 
 // ParseLogCreateProposal is a log parse operation binding the contract event 0xc10f2f4d53a0e342536c6af3cce9c6ee25c32dbb323521ce0e1d4494a3e362e8.
 //
 // Solidity: event LogCreateProposal(bytes32 indexed id, address indexed proposer, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) ParseLogCreateProposal(log types.Log) (*ProposalLogCreateProposal, error) {
-	event := new(ProposalLogCreateProposal)
-	if err := _Proposal.contract.UnpackLog(event, "LogCreateProposal", log); err != nil {
+func (_Contracts *ContractsFilterer) ParseLogCreateProposal(log types.Log) (*ContractsLogCreateProposal, error) {
+	event := new(ContractsLogCreateProposal)
+	if err := _Contracts.contract.UnpackLog(event, "LogCreateProposal", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ProposalLogPassProposalIterator is returned from FilterLogPassProposal and is used to iterate over the raw logs and unpacked data for LogPassProposal events raised by the Proposal contract.
-type ProposalLogPassProposalIterator struct {
-	Event *ProposalLogPassProposal // Event containing the contract specifics and raw log
+// ContractsLogPassProposalIterator is returned from FilterLogPassProposal and is used to iterate over the raw logs and unpacked data for LogPassProposal events raised by the Contracts contract.
+type ContractsLogPassProposalIterator struct {
+	Event *ContractsLogPassProposal // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -858,7 +858,7 @@ type ProposalLogPassProposalIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ProposalLogPassProposalIterator) Next() bool {
+func (it *ContractsLogPassProposalIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -867,7 +867,7 @@ func (it *ProposalLogPassProposalIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ProposalLogPassProposal)
+			it.Event = new(ContractsLogPassProposal)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -882,7 +882,7 @@ func (it *ProposalLogPassProposalIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ProposalLogPassProposal)
+		it.Event = new(ContractsLogPassProposal)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -898,19 +898,19 @@ func (it *ProposalLogPassProposalIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ProposalLogPassProposalIterator) Error() error {
+func (it *ContractsLogPassProposalIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ProposalLogPassProposalIterator) Close() error {
+func (it *ContractsLogPassProposalIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ProposalLogPassProposal represents a LogPassProposal event raised by the Proposal contract.
-type ProposalLogPassProposal struct {
+// ContractsLogPassProposal represents a LogPassProposal event raised by the Contracts contract.
+type ContractsLogPassProposal struct {
 	Id   [32]byte
 	Dst  common.Address
 	Time *big.Int
@@ -920,7 +920,7 @@ type ProposalLogPassProposal struct {
 // FilterLogPassProposal is a free log retrieval operation binding the contract event 0xc9d96d61eb62031865c523ae107f3c22f5ed445af237636bcd88bea1705c70d5.
 //
 // Solidity: event LogPassProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) FilterLogPassProposal(opts *bind.FilterOpts, id [][32]byte, dst []common.Address) (*ProposalLogPassProposalIterator, error) {
+func (_Contracts *ContractsFilterer) FilterLogPassProposal(opts *bind.FilterOpts, id [][32]byte, dst []common.Address) (*ContractsLogPassProposalIterator, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -931,17 +931,17 @@ func (_Proposal *ProposalFilterer) FilterLogPassProposal(opts *bind.FilterOpts, 
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.FilterLogs(opts, "LogPassProposal", idRule, dstRule)
+	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogPassProposal", idRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalLogPassProposalIterator{contract: _Proposal.contract, event: "LogPassProposal", logs: logs, sub: sub}, nil
+	return &ContractsLogPassProposalIterator{contract: _Contracts.contract, event: "LogPassProposal", logs: logs, sub: sub}, nil
 }
 
 // WatchLogPassProposal is a free log subscription operation binding the contract event 0xc9d96d61eb62031865c523ae107f3c22f5ed445af237636bcd88bea1705c70d5.
 //
 // Solidity: event LogPassProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) WatchLogPassProposal(opts *bind.WatchOpts, sink chan<- *ProposalLogPassProposal, id [][32]byte, dst []common.Address) (event.Subscription, error) {
+func (_Contracts *ContractsFilterer) WatchLogPassProposal(opts *bind.WatchOpts, sink chan<- *ContractsLogPassProposal, id [][32]byte, dst []common.Address) (event.Subscription, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -952,7 +952,7 @@ func (_Proposal *ProposalFilterer) WatchLogPassProposal(opts *bind.WatchOpts, si
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.WatchLogs(opts, "LogPassProposal", idRule, dstRule)
+	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogPassProposal", idRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
@@ -962,8 +962,8 @@ func (_Proposal *ProposalFilterer) WatchLogPassProposal(opts *bind.WatchOpts, si
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ProposalLogPassProposal)
-				if err := _Proposal.contract.UnpackLog(event, "LogPassProposal", log); err != nil {
+				event := new(ContractsLogPassProposal)
+				if err := _Contracts.contract.UnpackLog(event, "LogPassProposal", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -987,18 +987,18 @@ func (_Proposal *ProposalFilterer) WatchLogPassProposal(opts *bind.WatchOpts, si
 // ParseLogPassProposal is a log parse operation binding the contract event 0xc9d96d61eb62031865c523ae107f3c22f5ed445af237636bcd88bea1705c70d5.
 //
 // Solidity: event LogPassProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) ParseLogPassProposal(log types.Log) (*ProposalLogPassProposal, error) {
-	event := new(ProposalLogPassProposal)
-	if err := _Proposal.contract.UnpackLog(event, "LogPassProposal", log); err != nil {
+func (_Contracts *ContractsFilterer) ParseLogPassProposal(log types.Log) (*ContractsLogPassProposal, error) {
+	event := new(ContractsLogPassProposal)
+	if err := _Contracts.contract.UnpackLog(event, "LogPassProposal", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ProposalLogRejectProposalIterator is returned from FilterLogRejectProposal and is used to iterate over the raw logs and unpacked data for LogRejectProposal events raised by the Proposal contract.
-type ProposalLogRejectProposalIterator struct {
-	Event *ProposalLogRejectProposal // Event containing the contract specifics and raw log
+// ContractsLogRejectProposalIterator is returned from FilterLogRejectProposal and is used to iterate over the raw logs and unpacked data for LogRejectProposal events raised by the Contracts contract.
+type ContractsLogRejectProposalIterator struct {
+	Event *ContractsLogRejectProposal // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1012,7 +1012,7 @@ type ProposalLogRejectProposalIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ProposalLogRejectProposalIterator) Next() bool {
+func (it *ContractsLogRejectProposalIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1021,7 +1021,7 @@ func (it *ProposalLogRejectProposalIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ProposalLogRejectProposal)
+			it.Event = new(ContractsLogRejectProposal)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1036,7 +1036,7 @@ func (it *ProposalLogRejectProposalIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ProposalLogRejectProposal)
+		it.Event = new(ContractsLogRejectProposal)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1052,19 +1052,19 @@ func (it *ProposalLogRejectProposalIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ProposalLogRejectProposalIterator) Error() error {
+func (it *ContractsLogRejectProposalIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ProposalLogRejectProposalIterator) Close() error {
+func (it *ContractsLogRejectProposalIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ProposalLogRejectProposal represents a LogRejectProposal event raised by the Proposal contract.
-type ProposalLogRejectProposal struct {
+// ContractsLogRejectProposal represents a LogRejectProposal event raised by the Contracts contract.
+type ContractsLogRejectProposal struct {
 	Id   [32]byte
 	Dst  common.Address
 	Time *big.Int
@@ -1074,7 +1074,7 @@ type ProposalLogRejectProposal struct {
 // FilterLogRejectProposal is a free log retrieval operation binding the contract event 0xec955d77e6e7d74e18b1c91977ef0f6fd5a6d02a28d1979686339fe693997825.
 //
 // Solidity: event LogRejectProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) FilterLogRejectProposal(opts *bind.FilterOpts, id [][32]byte, dst []common.Address) (*ProposalLogRejectProposalIterator, error) {
+func (_Contracts *ContractsFilterer) FilterLogRejectProposal(opts *bind.FilterOpts, id [][32]byte, dst []common.Address) (*ContractsLogRejectProposalIterator, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -1085,17 +1085,17 @@ func (_Proposal *ProposalFilterer) FilterLogRejectProposal(opts *bind.FilterOpts
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.FilterLogs(opts, "LogRejectProposal", idRule, dstRule)
+	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogRejectProposal", idRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalLogRejectProposalIterator{contract: _Proposal.contract, event: "LogRejectProposal", logs: logs, sub: sub}, nil
+	return &ContractsLogRejectProposalIterator{contract: _Contracts.contract, event: "LogRejectProposal", logs: logs, sub: sub}, nil
 }
 
 // WatchLogRejectProposal is a free log subscription operation binding the contract event 0xec955d77e6e7d74e18b1c91977ef0f6fd5a6d02a28d1979686339fe693997825.
 //
 // Solidity: event LogRejectProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) WatchLogRejectProposal(opts *bind.WatchOpts, sink chan<- *ProposalLogRejectProposal, id [][32]byte, dst []common.Address) (event.Subscription, error) {
+func (_Contracts *ContractsFilterer) WatchLogRejectProposal(opts *bind.WatchOpts, sink chan<- *ContractsLogRejectProposal, id [][32]byte, dst []common.Address) (event.Subscription, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -1106,7 +1106,7 @@ func (_Proposal *ProposalFilterer) WatchLogRejectProposal(opts *bind.WatchOpts, 
 		dstRule = append(dstRule, dstItem)
 	}
 
-	logs, sub, err := _Proposal.contract.WatchLogs(opts, "LogRejectProposal", idRule, dstRule)
+	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogRejectProposal", idRule, dstRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1116,8 +1116,8 @@ func (_Proposal *ProposalFilterer) WatchLogRejectProposal(opts *bind.WatchOpts, 
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ProposalLogRejectProposal)
-				if err := _Proposal.contract.UnpackLog(event, "LogRejectProposal", log); err != nil {
+				event := new(ContractsLogRejectProposal)
+				if err := _Contracts.contract.UnpackLog(event, "LogRejectProposal", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1141,18 +1141,18 @@ func (_Proposal *ProposalFilterer) WatchLogRejectProposal(opts *bind.WatchOpts, 
 // ParseLogRejectProposal is a log parse operation binding the contract event 0xec955d77e6e7d74e18b1c91977ef0f6fd5a6d02a28d1979686339fe693997825.
 //
 // Solidity: event LogRejectProposal(bytes32 indexed id, address indexed dst, uint256 time)
-func (_Proposal *ProposalFilterer) ParseLogRejectProposal(log types.Log) (*ProposalLogRejectProposal, error) {
-	event := new(ProposalLogRejectProposal)
-	if err := _Proposal.contract.UnpackLog(event, "LogRejectProposal", log); err != nil {
+func (_Contracts *ContractsFilterer) ParseLogRejectProposal(log types.Log) (*ContractsLogRejectProposal, error) {
+	event := new(ContractsLogRejectProposal)
+	if err := _Contracts.contract.UnpackLog(event, "LogRejectProposal", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ProposalLogSetUnpassedIterator is returned from FilterLogSetUnpassed and is used to iterate over the raw logs and unpacked data for LogSetUnpassed events raised by the Proposal contract.
-type ProposalLogSetUnpassedIterator struct {
-	Event *ProposalLogSetUnpassed // Event containing the contract specifics and raw log
+// ContractsLogSetUnpassedIterator is returned from FilterLogSetUnpassed and is used to iterate over the raw logs and unpacked data for LogSetUnpassed events raised by the Contracts contract.
+type ContractsLogSetUnpassedIterator struct {
+	Event *ContractsLogSetUnpassed // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1166,7 +1166,7 @@ type ProposalLogSetUnpassedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ProposalLogSetUnpassedIterator) Next() bool {
+func (it *ContractsLogSetUnpassedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1175,7 +1175,7 @@ func (it *ProposalLogSetUnpassedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ProposalLogSetUnpassed)
+			it.Event = new(ContractsLogSetUnpassed)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1190,7 +1190,7 @@ func (it *ProposalLogSetUnpassedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ProposalLogSetUnpassed)
+		it.Event = new(ContractsLogSetUnpassed)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1206,19 +1206,19 @@ func (it *ProposalLogSetUnpassedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ProposalLogSetUnpassedIterator) Error() error {
+func (it *ContractsLogSetUnpassedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ProposalLogSetUnpassedIterator) Close() error {
+func (it *ContractsLogSetUnpassedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ProposalLogSetUnpassed represents a LogSetUnpassed event raised by the Proposal contract.
-type ProposalLogSetUnpassed struct {
+// ContractsLogSetUnpassed represents a LogSetUnpassed event raised by the Contracts contract.
+type ContractsLogSetUnpassed struct {
 	Val  common.Address
 	Time *big.Int
 	Raw  types.Log // Blockchain specific contextual infos
@@ -1227,31 +1227,31 @@ type ProposalLogSetUnpassed struct {
 // FilterLogSetUnpassed is a free log retrieval operation binding the contract event 0x4e0b191f7f5c32b1b5e3704b68874b1a3980147cae00be8ece271bfb5b92c07a.
 //
 // Solidity: event LogSetUnpassed(address indexed val, uint256 time)
-func (_Proposal *ProposalFilterer) FilterLogSetUnpassed(opts *bind.FilterOpts, val []common.Address) (*ProposalLogSetUnpassedIterator, error) {
+func (_Contracts *ContractsFilterer) FilterLogSetUnpassed(opts *bind.FilterOpts, val []common.Address) (*ContractsLogSetUnpassedIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Proposal.contract.FilterLogs(opts, "LogSetUnpassed", valRule)
+	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogSetUnpassed", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalLogSetUnpassedIterator{contract: _Proposal.contract, event: "LogSetUnpassed", logs: logs, sub: sub}, nil
+	return &ContractsLogSetUnpassedIterator{contract: _Contracts.contract, event: "LogSetUnpassed", logs: logs, sub: sub}, nil
 }
 
 // WatchLogSetUnpassed is a free log subscription operation binding the contract event 0x4e0b191f7f5c32b1b5e3704b68874b1a3980147cae00be8ece271bfb5b92c07a.
 //
 // Solidity: event LogSetUnpassed(address indexed val, uint256 time)
-func (_Proposal *ProposalFilterer) WatchLogSetUnpassed(opts *bind.WatchOpts, sink chan<- *ProposalLogSetUnpassed, val []common.Address) (event.Subscription, error) {
+func (_Contracts *ContractsFilterer) WatchLogSetUnpassed(opts *bind.WatchOpts, sink chan<- *ContractsLogSetUnpassed, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Proposal.contract.WatchLogs(opts, "LogSetUnpassed", valRule)
+	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogSetUnpassed", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1261,8 +1261,8 @@ func (_Proposal *ProposalFilterer) WatchLogSetUnpassed(opts *bind.WatchOpts, sin
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ProposalLogSetUnpassed)
-				if err := _Proposal.contract.UnpackLog(event, "LogSetUnpassed", log); err != nil {
+				event := new(ContractsLogSetUnpassed)
+				if err := _Contracts.contract.UnpackLog(event, "LogSetUnpassed", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1286,18 +1286,18 @@ func (_Proposal *ProposalFilterer) WatchLogSetUnpassed(opts *bind.WatchOpts, sin
 // ParseLogSetUnpassed is a log parse operation binding the contract event 0x4e0b191f7f5c32b1b5e3704b68874b1a3980147cae00be8ece271bfb5b92c07a.
 //
 // Solidity: event LogSetUnpassed(address indexed val, uint256 time)
-func (_Proposal *ProposalFilterer) ParseLogSetUnpassed(log types.Log) (*ProposalLogSetUnpassed, error) {
-	event := new(ProposalLogSetUnpassed)
-	if err := _Proposal.contract.UnpackLog(event, "LogSetUnpassed", log); err != nil {
+func (_Contracts *ContractsFilterer) ParseLogSetUnpassed(log types.Log) (*ContractsLogSetUnpassed, error) {
+	event := new(ContractsLogSetUnpassed)
+	if err := _Contracts.contract.UnpackLog(event, "LogSetUnpassed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ProposalLogVoteIterator is returned from FilterLogVote and is used to iterate over the raw logs and unpacked data for LogVote events raised by the Proposal contract.
-type ProposalLogVoteIterator struct {
-	Event *ProposalLogVote // Event containing the contract specifics and raw log
+// ContractsLogVoteIterator is returned from FilterLogVote and is used to iterate over the raw logs and unpacked data for LogVote events raised by the Contracts contract.
+type ContractsLogVoteIterator struct {
+	Event *ContractsLogVote // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1311,7 +1311,7 @@ type ProposalLogVoteIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ProposalLogVoteIterator) Next() bool {
+func (it *ContractsLogVoteIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1320,7 +1320,7 @@ func (it *ProposalLogVoteIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ProposalLogVote)
+			it.Event = new(ContractsLogVote)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1335,7 +1335,7 @@ func (it *ProposalLogVoteIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ProposalLogVote)
+		it.Event = new(ContractsLogVote)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1351,19 +1351,19 @@ func (it *ProposalLogVoteIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ProposalLogVoteIterator) Error() error {
+func (it *ContractsLogVoteIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ProposalLogVoteIterator) Close() error {
+func (it *ContractsLogVoteIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ProposalLogVote represents a LogVote event raised by the Proposal contract.
-type ProposalLogVote struct {
+// ContractsLogVote represents a LogVote event raised by the Contracts contract.
+type ContractsLogVote struct {
 	Id    [32]byte
 	Voter common.Address
 	Auth  bool
@@ -1374,7 +1374,7 @@ type ProposalLogVote struct {
 // FilterLogVote is a free log retrieval operation binding the contract event 0x6c59bda68cac318717c60c7c9635a78a0f0613f9887cc18a7157f5745a86d14e.
 //
 // Solidity: event LogVote(bytes32 indexed id, address indexed voter, bool auth, uint256 time)
-func (_Proposal *ProposalFilterer) FilterLogVote(opts *bind.FilterOpts, id [][32]byte, voter []common.Address) (*ProposalLogVoteIterator, error) {
+func (_Contracts *ContractsFilterer) FilterLogVote(opts *bind.FilterOpts, id [][32]byte, voter []common.Address) (*ContractsLogVoteIterator, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -1385,17 +1385,17 @@ func (_Proposal *ProposalFilterer) FilterLogVote(opts *bind.FilterOpts, id [][32
 		voterRule = append(voterRule, voterItem)
 	}
 
-	logs, sub, err := _Proposal.contract.FilterLogs(opts, "LogVote", idRule, voterRule)
+	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogVote", idRule, voterRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ProposalLogVoteIterator{contract: _Proposal.contract, event: "LogVote", logs: logs, sub: sub}, nil
+	return &ContractsLogVoteIterator{contract: _Contracts.contract, event: "LogVote", logs: logs, sub: sub}, nil
 }
 
 // WatchLogVote is a free log subscription operation binding the contract event 0x6c59bda68cac318717c60c7c9635a78a0f0613f9887cc18a7157f5745a86d14e.
 //
 // Solidity: event LogVote(bytes32 indexed id, address indexed voter, bool auth, uint256 time)
-func (_Proposal *ProposalFilterer) WatchLogVote(opts *bind.WatchOpts, sink chan<- *ProposalLogVote, id [][32]byte, voter []common.Address) (event.Subscription, error) {
+func (_Contracts *ContractsFilterer) WatchLogVote(opts *bind.WatchOpts, sink chan<- *ContractsLogVote, id [][32]byte, voter []common.Address) (event.Subscription, error) {
 
 	var idRule []interface{}
 	for _, idItem := range id {
@@ -1406,7 +1406,7 @@ func (_Proposal *ProposalFilterer) WatchLogVote(opts *bind.WatchOpts, sink chan<
 		voterRule = append(voterRule, voterItem)
 	}
 
-	logs, sub, err := _Proposal.contract.WatchLogs(opts, "LogVote", idRule, voterRule)
+	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogVote", idRule, voterRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1416,8 +1416,8 @@ func (_Proposal *ProposalFilterer) WatchLogVote(opts *bind.WatchOpts, sink chan<
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ProposalLogVote)
-				if err := _Proposal.contract.UnpackLog(event, "LogVote", log); err != nil {
+				event := new(ContractsLogVote)
+				if err := _Contracts.contract.UnpackLog(event, "LogVote", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1441,9 +1441,9 @@ func (_Proposal *ProposalFilterer) WatchLogVote(opts *bind.WatchOpts, sink chan<
 // ParseLogVote is a log parse operation binding the contract event 0x6c59bda68cac318717c60c7c9635a78a0f0613f9887cc18a7157f5745a86d14e.
 //
 // Solidity: event LogVote(bytes32 indexed id, address indexed voter, bool auth, uint256 time)
-func (_Proposal *ProposalFilterer) ParseLogVote(log types.Log) (*ProposalLogVote, error) {
-	event := new(ProposalLogVote)
-	if err := _Proposal.contract.UnpackLog(event, "LogVote", log); err != nil {
+func (_Contracts *ContractsFilterer) ParseLogVote(log types.Log) (*ContractsLogVote, error) {
+	event := new(ContractsLogVote)
+	if err := _Contracts.contract.UnpackLog(event, "LogVote", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
