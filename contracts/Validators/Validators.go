@@ -1,7 +1,7 @@
 // Code generated - DO NOT EDIT.
 // This file is a generated binding and any manual changes will be lost.
 
-package contracts
+package Validators
 
 import (
 	"math/big"
@@ -26,107 +26,107 @@ var (
 	_ = event.NewSubscription
 )
 
-// ContractsABI is the input ABI used to generate the binding from.
-const ContractsABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogAddToTopValidators\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogCreateValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"coinbase\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"blockReward\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogDistributeBlockReward\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogEditValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogReactive\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveFromTopValidators\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveValidatorIncoming\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"staking\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogStake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogUnstake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"newSet\",\"type\":\"address[]\"}],\"name\":\"LogUpdateValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogWithdrawProfits\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogWithdrawStaking\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"MaxValidators\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MinimalStakingCoin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ProposalAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PunishContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"StakingLockPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ValidatorContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WithdrawProfitPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"currentValidatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"highestValidatorsSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalJailedHB\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalStake\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"vals\",\"type\":\"address[]\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"stake\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"addresspayable\",\"name\":\"feeAddr\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"moniker\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"identity\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"website\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"createOrEditValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"tryReactive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"unstake\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"withdrawStaking\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"withdrawProfits\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distributeBlockReward\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"newSet\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"epoch\",\"type\":\"uint256\"}],\"name\":\"updateActiveValidatorSet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"removeValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"removeValidatorIncoming\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getValidatorDescription\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getValidatorInfo\",\"outputs\":[{\"internalType\":\"addresspayable\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"enumValidators.Status\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getStakingInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getActiveValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalStakeOfActiveValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"len\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"isActiveValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"isTopValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTopValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"moniker\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"identity\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"website\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"validateDescription\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}]"
+// ValidatorsABI is the input ABI used to generate the binding from.
+const ValidatorsABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogAddToTopValidators\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogCreateValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"coinbase\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"blockReward\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogDistributeBlockReward\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogEditValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogReactive\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveFromTopValidators\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogRemoveValidatorIncoming\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"staking\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogStake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogUnstake\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"newSet\",\"type\":\"address[]\"}],\"name\":\"LogUpdateValidator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"fee\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"hb\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogWithdrawProfits\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"LogWithdrawStaking\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"MaxValidators\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MinimalStakingCoin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ProposalAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PunishContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"StakingLockPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ValidatorContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WithdrawProfitPeriod\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"currentValidatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"highestValidatorsSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalJailedHB\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalStake\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"vals\",\"type\":\"address[]\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"stake\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"addresspayable\",\"name\":\"feeAddr\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"moniker\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"identity\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"website\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"createOrEditValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"tryReactive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"unstake\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"withdrawStaking\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"withdrawProfits\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distributeBlockReward\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"newSet\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"epoch\",\"type\":\"uint256\"}],\"name\":\"updateActiveValidatorSet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"removeValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"removeValidatorIncoming\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getValidatorDescription\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getValidatorInfo\",\"outputs\":[{\"internalType\":\"addresspayable\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"enumValidators.Status\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"getStakingInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getActiveValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalStakeOfActiveValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"len\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"isActiveValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"isTopValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTopValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"moniker\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"identity\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"website\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"details\",\"type\":\"string\"}],\"name\":\"validateDescription\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}]"
 
-// Contracts is an auto generated Go binding around an Ethereum contract.
-type Contracts struct {
-	ContractsCaller     // Read-only binding to the contract
-	ContractsTransactor // Write-only binding to the contract
-	ContractsFilterer   // Log filterer for contract events
+// Validators is an auto generated Go binding around an Ethereum contract.
+type Validators struct {
+	ValidatorsCaller     // Read-only binding to the contract
+	ValidatorsTransactor // Write-only binding to the contract
+	ValidatorsFilterer   // Log filterer for contract events
 }
 
-// ContractsCaller is an auto generated read-only Go binding around an Ethereum contract.
-type ContractsCaller struct {
+// ValidatorsCaller is an auto generated read-only Go binding around an Ethereum contract.
+type ValidatorsCaller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ContractsTransactor is an auto generated write-only Go binding around an Ethereum contract.
-type ContractsTransactor struct {
+// ValidatorsTransactor is an auto generated write-only Go binding around an Ethereum contract.
+type ValidatorsTransactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ContractsFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
-type ContractsFilterer struct {
+// ValidatorsFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
+type ValidatorsFilterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ContractsSession is an auto generated Go binding around an Ethereum contract,
+// ValidatorsSession is an auto generated Go binding around an Ethereum contract,
 // with pre-set call and transact options.
-type ContractsSession struct {
-	Contract     *Contracts        // Generic contract binding to set the session for
+type ValidatorsSession struct {
+	Contract     *Validators       // Generic contract binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ContractsCallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// ValidatorsCallerSession is an auto generated read-only Go binding around an Ethereum contract,
 // with pre-set call options.
-type ContractsCallerSession struct {
-	Contract *ContractsCaller // Generic contract caller binding to set the session for
-	CallOpts bind.CallOpts    // Call options to use throughout this session
+type ValidatorsCallerSession struct {
+	Contract *ValidatorsCaller // Generic contract caller binding to set the session for
+	CallOpts bind.CallOpts     // Call options to use throughout this session
 }
 
-// ContractsTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// ValidatorsTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
 // with pre-set transact options.
-type ContractsTransactorSession struct {
-	Contract     *ContractsTransactor // Generic contract transactor binding to set the session for
-	TransactOpts bind.TransactOpts    // Transaction auth options to use throughout this session
+type ValidatorsTransactorSession struct {
+	Contract     *ValidatorsTransactor // Generic contract transactor binding to set the session for
+	TransactOpts bind.TransactOpts     // Transaction auth options to use throughout this session
 }
 
-// ContractsRaw is an auto generated low-level Go binding around an Ethereum contract.
-type ContractsRaw struct {
-	Contract *Contracts // Generic contract binding to access the raw methods on
+// ValidatorsRaw is an auto generated low-level Go binding around an Ethereum contract.
+type ValidatorsRaw struct {
+	Contract *Validators // Generic contract binding to access the raw methods on
 }
 
-// ContractsCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
-type ContractsCallerRaw struct {
-	Contract *ContractsCaller // Generic read-only contract binding to access the raw methods on
+// ValidatorsCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+type ValidatorsCallerRaw struct {
+	Contract *ValidatorsCaller // Generic read-only contract binding to access the raw methods on
 }
 
-// ContractsTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
-type ContractsTransactorRaw struct {
-	Contract *ContractsTransactor // Generic write-only contract binding to access the raw methods on
+// ValidatorsTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+type ValidatorsTransactorRaw struct {
+	Contract *ValidatorsTransactor // Generic write-only contract binding to access the raw methods on
 }
 
-// NewContracts creates a new instance of Contracts, bound to a specific deployed contract.
-func NewContracts(address common.Address, backend bind.ContractBackend) (*Contracts, error) {
-	contract, err := bindContracts(address, backend, backend, backend)
+// NewValidators creates a new instance of Validators, bound to a specific deployed contract.
+func NewValidators(address common.Address, backend bind.ContractBackend) (*Validators, error) {
+	contract, err := bindValidators(address, backend, backend, backend)
 	if err != nil {
 		return nil, err
 	}
-	return &Contracts{ContractsCaller: ContractsCaller{contract: contract}, ContractsTransactor: ContractsTransactor{contract: contract}, ContractsFilterer: ContractsFilterer{contract: contract}}, nil
+	return &Validators{ValidatorsCaller: ValidatorsCaller{contract: contract}, ValidatorsTransactor: ValidatorsTransactor{contract: contract}, ValidatorsFilterer: ValidatorsFilterer{contract: contract}}, nil
 }
 
-// NewContractsCaller creates a new read-only instance of Contracts, bound to a specific deployed contract.
-func NewContractsCaller(address common.Address, caller bind.ContractCaller) (*ContractsCaller, error) {
-	contract, err := bindContracts(address, caller, nil, nil)
+// NewValidatorsCaller creates a new read-only instance of Validators, bound to a specific deployed contract.
+func NewValidatorsCaller(address common.Address, caller bind.ContractCaller) (*ValidatorsCaller, error) {
+	contract, err := bindValidators(address, caller, nil, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsCaller{contract: contract}, nil
+	return &ValidatorsCaller{contract: contract}, nil
 }
 
-// NewContractsTransactor creates a new write-only instance of Contracts, bound to a specific deployed contract.
-func NewContractsTransactor(address common.Address, transactor bind.ContractTransactor) (*ContractsTransactor, error) {
-	contract, err := bindContracts(address, nil, transactor, nil)
+// NewValidatorsTransactor creates a new write-only instance of Validators, bound to a specific deployed contract.
+func NewValidatorsTransactor(address common.Address, transactor bind.ContractTransactor) (*ValidatorsTransactor, error) {
+	contract, err := bindValidators(address, nil, transactor, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsTransactor{contract: contract}, nil
+	return &ValidatorsTransactor{contract: contract}, nil
 }
 
-// NewContractsFilterer creates a new log filterer instance of Contracts, bound to a specific deployed contract.
-func NewContractsFilterer(address common.Address, filterer bind.ContractFilterer) (*ContractsFilterer, error) {
-	contract, err := bindContracts(address, nil, nil, filterer)
+// NewValidatorsFilterer creates a new log filterer instance of Validators, bound to a specific deployed contract.
+func NewValidatorsFilterer(address common.Address, filterer bind.ContractFilterer) (*ValidatorsFilterer, error) {
+	contract, err := bindValidators(address, nil, nil, filterer)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsFilterer{contract: contract}, nil
+	return &ValidatorsFilterer{contract: contract}, nil
 }
 
-// bindContracts binds a generic wrapper to an already deployed contract.
-func bindContracts(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := abi.JSON(strings.NewReader(ContractsABI))
+// bindValidators binds a generic wrapper to an already deployed contract.
+func bindValidators(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
+	parsed, err := abi.JSON(strings.NewReader(ValidatorsABI))
 	if err != nil {
 		return nil, err
 	}
@@ -137,46 +137,46 @@ func bindContracts(address common.Address, caller bind.ContractCaller, transacto
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Contracts *ContractsRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Contracts.Contract.ContractsCaller.contract.Call(opts, result, method, params...)
+func (_Validators *ValidatorsRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _Validators.Contract.ValidatorsCaller.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Contracts *ContractsRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Contracts.Contract.ContractsTransactor.contract.Transfer(opts)
+func (_Validators *ValidatorsRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Validators.Contract.ValidatorsTransactor.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Contracts *ContractsRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Contracts.Contract.ContractsTransactor.contract.Transact(opts, method, params...)
+func (_Validators *ValidatorsRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _Validators.Contract.ValidatorsTransactor.contract.Transact(opts, method, params...)
 }
 
 // Call invokes the (constant) contract method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_Contracts *ContractsCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _Contracts.Contract.contract.Call(opts, result, method, params...)
+func (_Validators *ValidatorsCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _Validators.Contract.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_Contracts *ContractsTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Contracts.Contract.contract.Transfer(opts)
+func (_Validators *ValidatorsTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Validators.Contract.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_Contracts *ContractsTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _Contracts.Contract.contract.Transact(opts, method, params...)
+func (_Validators *ValidatorsTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _Validators.Contract.contract.Transact(opts, method, params...)
 }
 
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Contracts *ContractsCaller) MaxValidators(opts *bind.CallOpts) (uint16, error) {
+func (_Validators *ValidatorsCaller) MaxValidators(opts *bind.CallOpts) (uint16, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "MaxValidators")
+	err := _Validators.contract.Call(opts, &out, "MaxValidators")
 
 	if err != nil {
 		return *new(uint16), err
@@ -191,23 +191,23 @@ func (_Contracts *ContractsCaller) MaxValidators(opts *bind.CallOpts) (uint16, e
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Contracts *ContractsSession) MaxValidators() (uint16, error) {
-	return _Contracts.Contract.MaxValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) MaxValidators() (uint16, error) {
+	return _Validators.Contract.MaxValidators(&_Validators.CallOpts)
 }
 
 // MaxValidators is a free data retrieval call binding the contract method 0xc967f90f.
 //
 // Solidity: function MaxValidators() view returns(uint16)
-func (_Contracts *ContractsCallerSession) MaxValidators() (uint16, error) {
-	return _Contracts.Contract.MaxValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) MaxValidators() (uint16, error) {
+	return _Validators.Contract.MaxValidators(&_Validators.CallOpts)
 }
 
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Contracts *ContractsCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big.Int, error) {
+func (_Validators *ValidatorsCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "MinimalStakingCoin")
+	err := _Validators.contract.Call(opts, &out, "MinimalStakingCoin")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -222,23 +222,23 @@ func (_Contracts *ContractsCaller) MinimalStakingCoin(opts *bind.CallOpts) (*big
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Contracts *ContractsSession) MinimalStakingCoin() (*big.Int, error) {
-	return _Contracts.Contract.MinimalStakingCoin(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) MinimalStakingCoin() (*big.Int, error) {
+	return _Validators.Contract.MinimalStakingCoin(&_Validators.CallOpts)
 }
 
 // MinimalStakingCoin is a free data retrieval call binding the contract method 0xbe645692.
 //
 // Solidity: function MinimalStakingCoin() view returns(uint256)
-func (_Contracts *ContractsCallerSession) MinimalStakingCoin() (*big.Int, error) {
-	return _Contracts.Contract.MinimalStakingCoin(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) MinimalStakingCoin() (*big.Int, error) {
+	return _Validators.Contract.MinimalStakingCoin(&_Validators.CallOpts)
 }
 
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Contracts *ContractsCaller) ProposalAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Validators *ValidatorsCaller) ProposalAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "ProposalAddr")
+	err := _Validators.contract.Call(opts, &out, "ProposalAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -253,23 +253,23 @@ func (_Contracts *ContractsCaller) ProposalAddr(opts *bind.CallOpts) (common.Add
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Contracts *ContractsSession) ProposalAddr() (common.Address, error) {
-	return _Contracts.Contract.ProposalAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) ProposalAddr() (common.Address, error) {
+	return _Validators.Contract.ProposalAddr(&_Validators.CallOpts)
 }
 
 // ProposalAddr is a free data retrieval call binding the contract method 0x6233be5d.
 //
 // Solidity: function ProposalAddr() view returns(address)
-func (_Contracts *ContractsCallerSession) ProposalAddr() (common.Address, error) {
-	return _Contracts.Contract.ProposalAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) ProposalAddr() (common.Address, error) {
+	return _Validators.Contract.ProposalAddr(&_Validators.CallOpts)
 }
 
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Contracts *ContractsCaller) PunishContractAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Validators *ValidatorsCaller) PunishContractAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "PunishContractAddr")
+	err := _Validators.contract.Call(opts, &out, "PunishContractAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -284,23 +284,23 @@ func (_Contracts *ContractsCaller) PunishContractAddr(opts *bind.CallOpts) (comm
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Contracts *ContractsSession) PunishContractAddr() (common.Address, error) {
-	return _Contracts.Contract.PunishContractAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) PunishContractAddr() (common.Address, error) {
+	return _Validators.Contract.PunishContractAddr(&_Validators.CallOpts)
 }
 
 // PunishContractAddr is a free data retrieval call binding the contract method 0x1b5e358c.
 //
 // Solidity: function PunishContractAddr() view returns(address)
-func (_Contracts *ContractsCallerSession) PunishContractAddr() (common.Address, error) {
-	return _Contracts.Contract.PunishContractAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) PunishContractAddr() (common.Address, error) {
+	return _Validators.Contract.PunishContractAddr(&_Validators.CallOpts)
 }
 
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Contracts *ContractsCaller) StakingLockPeriod(opts *bind.CallOpts) (uint64, error) {
+func (_Validators *ValidatorsCaller) StakingLockPeriod(opts *bind.CallOpts) (uint64, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "StakingLockPeriod")
+	err := _Validators.contract.Call(opts, &out, "StakingLockPeriod")
 
 	if err != nil {
 		return *new(uint64), err
@@ -315,23 +315,23 @@ func (_Contracts *ContractsCaller) StakingLockPeriod(opts *bind.CallOpts) (uint6
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Contracts *ContractsSession) StakingLockPeriod() (uint64, error) {
-	return _Contracts.Contract.StakingLockPeriod(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) StakingLockPeriod() (uint64, error) {
+	return _Validators.Contract.StakingLockPeriod(&_Validators.CallOpts)
 }
 
 // StakingLockPeriod is a free data retrieval call binding the contract method 0xdb78dd28.
 //
 // Solidity: function StakingLockPeriod() view returns(uint64)
-func (_Contracts *ContractsCallerSession) StakingLockPeriod() (uint64, error) {
-	return _Contracts.Contract.StakingLockPeriod(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) StakingLockPeriod() (uint64, error) {
+	return _Validators.Contract.StakingLockPeriod(&_Validators.CallOpts)
 }
 
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Contracts *ContractsCaller) ValidatorContractAddr(opts *bind.CallOpts) (common.Address, error) {
+func (_Validators *ValidatorsCaller) ValidatorContractAddr(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "ValidatorContractAddr")
+	err := _Validators.contract.Call(opts, &out, "ValidatorContractAddr")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -346,23 +346,23 @@ func (_Contracts *ContractsCaller) ValidatorContractAddr(opts *bind.CallOpts) (c
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Contracts *ContractsSession) ValidatorContractAddr() (common.Address, error) {
-	return _Contracts.Contract.ValidatorContractAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) ValidatorContractAddr() (common.Address, error) {
+	return _Validators.Contract.ValidatorContractAddr(&_Validators.CallOpts)
 }
 
 // ValidatorContractAddr is a free data retrieval call binding the contract method 0x3a061bd3.
 //
 // Solidity: function ValidatorContractAddr() view returns(address)
-func (_Contracts *ContractsCallerSession) ValidatorContractAddr() (common.Address, error) {
-	return _Contracts.Contract.ValidatorContractAddr(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) ValidatorContractAddr() (common.Address, error) {
+	return _Validators.Contract.ValidatorContractAddr(&_Validators.CallOpts)
 }
 
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Contracts *ContractsCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (uint64, error) {
+func (_Validators *ValidatorsCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (uint64, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "WithdrawProfitPeriod")
+	err := _Validators.contract.Call(opts, &out, "WithdrawProfitPeriod")
 
 	if err != nil {
 		return *new(uint64), err
@@ -377,23 +377,23 @@ func (_Contracts *ContractsCaller) WithdrawProfitPeriod(opts *bind.CallOpts) (ui
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Contracts *ContractsSession) WithdrawProfitPeriod() (uint64, error) {
-	return _Contracts.Contract.WithdrawProfitPeriod(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) WithdrawProfitPeriod() (uint64, error) {
+	return _Validators.Contract.WithdrawProfitPeriod(&_Validators.CallOpts)
 }
 
 // WithdrawProfitPeriod is a free data retrieval call binding the contract method 0xefd8d8e2.
 //
 // Solidity: function WithdrawProfitPeriod() view returns(uint64)
-func (_Contracts *ContractsCallerSession) WithdrawProfitPeriod() (uint64, error) {
-	return _Contracts.Contract.WithdrawProfitPeriod(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) WithdrawProfitPeriod() (uint64, error) {
+	return _Validators.Contract.WithdrawProfitPeriod(&_Validators.CallOpts)
 }
 
 // CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
 //
 // Solidity: function currentValidatorSet(uint256 ) view returns(address)
-func (_Contracts *ContractsCaller) CurrentValidatorSet(opts *bind.CallOpts, arg0 *big.Int) (common.Address, error) {
+func (_Validators *ValidatorsCaller) CurrentValidatorSet(opts *bind.CallOpts, arg0 *big.Int) (common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "currentValidatorSet", arg0)
+	err := _Validators.contract.Call(opts, &out, "currentValidatorSet", arg0)
 
 	if err != nil {
 		return *new(common.Address), err
@@ -408,23 +408,23 @@ func (_Contracts *ContractsCaller) CurrentValidatorSet(opts *bind.CallOpts, arg0
 // CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
 //
 // Solidity: function currentValidatorSet(uint256 ) view returns(address)
-func (_Contracts *ContractsSession) CurrentValidatorSet(arg0 *big.Int) (common.Address, error) {
-	return _Contracts.Contract.CurrentValidatorSet(&_Contracts.CallOpts, arg0)
+func (_Validators *ValidatorsSession) CurrentValidatorSet(arg0 *big.Int) (common.Address, error) {
+	return _Validators.Contract.CurrentValidatorSet(&_Validators.CallOpts, arg0)
 }
 
 // CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
 //
 // Solidity: function currentValidatorSet(uint256 ) view returns(address)
-func (_Contracts *ContractsCallerSession) CurrentValidatorSet(arg0 *big.Int) (common.Address, error) {
-	return _Contracts.Contract.CurrentValidatorSet(&_Contracts.CallOpts, arg0)
+func (_Validators *ValidatorsCallerSession) CurrentValidatorSet(arg0 *big.Int) (common.Address, error) {
+	return _Validators.Contract.CurrentValidatorSet(&_Validators.CallOpts, arg0)
 }
 
 // GetActiveValidators is a free data retrieval call binding the contract method 0x9de70258.
 //
 // Solidity: function getActiveValidators() view returns(address[])
-func (_Contracts *ContractsCaller) GetActiveValidators(opts *bind.CallOpts) ([]common.Address, error) {
+func (_Validators *ValidatorsCaller) GetActiveValidators(opts *bind.CallOpts) ([]common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getActiveValidators")
+	err := _Validators.contract.Call(opts, &out, "getActiveValidators")
 
 	if err != nil {
 		return *new([]common.Address), err
@@ -439,23 +439,23 @@ func (_Contracts *ContractsCaller) GetActiveValidators(opts *bind.CallOpts) ([]c
 // GetActiveValidators is a free data retrieval call binding the contract method 0x9de70258.
 //
 // Solidity: function getActiveValidators() view returns(address[])
-func (_Contracts *ContractsSession) GetActiveValidators() ([]common.Address, error) {
-	return _Contracts.Contract.GetActiveValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) GetActiveValidators() ([]common.Address, error) {
+	return _Validators.Contract.GetActiveValidators(&_Validators.CallOpts)
 }
 
 // GetActiveValidators is a free data retrieval call binding the contract method 0x9de70258.
 //
 // Solidity: function getActiveValidators() view returns(address[])
-func (_Contracts *ContractsCallerSession) GetActiveValidators() ([]common.Address, error) {
-	return _Contracts.Contract.GetActiveValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) GetActiveValidators() ([]common.Address, error) {
+	return _Validators.Contract.GetActiveValidators(&_Validators.CallOpts)
 }
 
 // GetStakingInfo is a free data retrieval call binding the contract method 0x7f4f95fa.
 //
 // Solidity: function getStakingInfo(address staker, address val) view returns(uint256, uint256, uint256)
-func (_Contracts *ContractsCaller) GetStakingInfo(opts *bind.CallOpts, staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
+func (_Validators *ValidatorsCaller) GetStakingInfo(opts *bind.CallOpts, staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getStakingInfo", staker, val)
+	err := _Validators.contract.Call(opts, &out, "getStakingInfo", staker, val)
 
 	if err != nil {
 		return *new(*big.Int), *new(*big.Int), *new(*big.Int), err
@@ -472,23 +472,23 @@ func (_Contracts *ContractsCaller) GetStakingInfo(opts *bind.CallOpts, staker co
 // GetStakingInfo is a free data retrieval call binding the contract method 0x7f4f95fa.
 //
 // Solidity: function getStakingInfo(address staker, address val) view returns(uint256, uint256, uint256)
-func (_Contracts *ContractsSession) GetStakingInfo(staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
-	return _Contracts.Contract.GetStakingInfo(&_Contracts.CallOpts, staker, val)
+func (_Validators *ValidatorsSession) GetStakingInfo(staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
+	return _Validators.Contract.GetStakingInfo(&_Validators.CallOpts, staker, val)
 }
 
 // GetStakingInfo is a free data retrieval call binding the contract method 0x7f4f95fa.
 //
 // Solidity: function getStakingInfo(address staker, address val) view returns(uint256, uint256, uint256)
-func (_Contracts *ContractsCallerSession) GetStakingInfo(staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
-	return _Contracts.Contract.GetStakingInfo(&_Contracts.CallOpts, staker, val)
+func (_Validators *ValidatorsCallerSession) GetStakingInfo(staker common.Address, val common.Address) (*big.Int, *big.Int, *big.Int, error) {
+	return _Validators.Contract.GetStakingInfo(&_Validators.CallOpts, staker, val)
 }
 
 // GetTopValidators is a free data retrieval call binding the contract method 0xafeea115.
 //
 // Solidity: function getTopValidators() view returns(address[])
-func (_Contracts *ContractsCaller) GetTopValidators(opts *bind.CallOpts) ([]common.Address, error) {
+func (_Validators *ValidatorsCaller) GetTopValidators(opts *bind.CallOpts) ([]common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getTopValidators")
+	err := _Validators.contract.Call(opts, &out, "getTopValidators")
 
 	if err != nil {
 		return *new([]common.Address), err
@@ -503,26 +503,26 @@ func (_Contracts *ContractsCaller) GetTopValidators(opts *bind.CallOpts) ([]comm
 // GetTopValidators is a free data retrieval call binding the contract method 0xafeea115.
 //
 // Solidity: function getTopValidators() view returns(address[])
-func (_Contracts *ContractsSession) GetTopValidators() ([]common.Address, error) {
-	return _Contracts.Contract.GetTopValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) GetTopValidators() ([]common.Address, error) {
+	return _Validators.Contract.GetTopValidators(&_Validators.CallOpts)
 }
 
 // GetTopValidators is a free data retrieval call binding the contract method 0xafeea115.
 //
 // Solidity: function getTopValidators() view returns(address[])
-func (_Contracts *ContractsCallerSession) GetTopValidators() ([]common.Address, error) {
-	return _Contracts.Contract.GetTopValidators(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) GetTopValidators() ([]common.Address, error) {
+	return _Validators.Contract.GetTopValidators(&_Validators.CallOpts)
 }
 
 // GetTotalStakeOfActiveValidators is a free data retrieval call binding the contract method 0xc253c384.
 //
 // Solidity: function getTotalStakeOfActiveValidators() view returns(uint256 total, uint256 len)
-func (_Contracts *ContractsCaller) GetTotalStakeOfActiveValidators(opts *bind.CallOpts) (struct {
+func (_Validators *ValidatorsCaller) GetTotalStakeOfActiveValidators(opts *bind.CallOpts) (struct {
 	Total *big.Int
 	Len   *big.Int
 }, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getTotalStakeOfActiveValidators")
+	err := _Validators.contract.Call(opts, &out, "getTotalStakeOfActiveValidators")
 
 	outstruct := new(struct {
 		Total *big.Int
@@ -539,29 +539,29 @@ func (_Contracts *ContractsCaller) GetTotalStakeOfActiveValidators(opts *bind.Ca
 // GetTotalStakeOfActiveValidators is a free data retrieval call binding the contract method 0xc253c384.
 //
 // Solidity: function getTotalStakeOfActiveValidators() view returns(uint256 total, uint256 len)
-func (_Contracts *ContractsSession) GetTotalStakeOfActiveValidators() (struct {
+func (_Validators *ValidatorsSession) GetTotalStakeOfActiveValidators() (struct {
 	Total *big.Int
 	Len   *big.Int
 }, error) {
-	return _Contracts.Contract.GetTotalStakeOfActiveValidators(&_Contracts.CallOpts)
+	return _Validators.Contract.GetTotalStakeOfActiveValidators(&_Validators.CallOpts)
 }
 
 // GetTotalStakeOfActiveValidators is a free data retrieval call binding the contract method 0xc253c384.
 //
 // Solidity: function getTotalStakeOfActiveValidators() view returns(uint256 total, uint256 len)
-func (_Contracts *ContractsCallerSession) GetTotalStakeOfActiveValidators() (struct {
+func (_Validators *ValidatorsCallerSession) GetTotalStakeOfActiveValidators() (struct {
 	Total *big.Int
 	Len   *big.Int
 }, error) {
-	return _Contracts.Contract.GetTotalStakeOfActiveValidators(&_Contracts.CallOpts)
+	return _Validators.Contract.GetTotalStakeOfActiveValidators(&_Validators.CallOpts)
 }
 
 // GetValidatorDescription is a free data retrieval call binding the contract method 0xa43569b3.
 //
 // Solidity: function getValidatorDescription(address val) view returns(string, string, string, string, string)
-func (_Contracts *ContractsCaller) GetValidatorDescription(opts *bind.CallOpts, val common.Address) (string, string, string, string, string, error) {
+func (_Validators *ValidatorsCaller) GetValidatorDescription(opts *bind.CallOpts, val common.Address) (string, string, string, string, string, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getValidatorDescription", val)
+	err := _Validators.contract.Call(opts, &out, "getValidatorDescription", val)
 
 	if err != nil {
 		return *new(string), *new(string), *new(string), *new(string), *new(string), err
@@ -580,23 +580,23 @@ func (_Contracts *ContractsCaller) GetValidatorDescription(opts *bind.CallOpts, 
 // GetValidatorDescription is a free data retrieval call binding the contract method 0xa43569b3.
 //
 // Solidity: function getValidatorDescription(address val) view returns(string, string, string, string, string)
-func (_Contracts *ContractsSession) GetValidatorDescription(val common.Address) (string, string, string, string, string, error) {
-	return _Contracts.Contract.GetValidatorDescription(&_Contracts.CallOpts, val)
+func (_Validators *ValidatorsSession) GetValidatorDescription(val common.Address) (string, string, string, string, string, error) {
+	return _Validators.Contract.GetValidatorDescription(&_Validators.CallOpts, val)
 }
 
 // GetValidatorDescription is a free data retrieval call binding the contract method 0xa43569b3.
 //
 // Solidity: function getValidatorDescription(address val) view returns(string, string, string, string, string)
-func (_Contracts *ContractsCallerSession) GetValidatorDescription(val common.Address) (string, string, string, string, string, error) {
-	return _Contracts.Contract.GetValidatorDescription(&_Contracts.CallOpts, val)
+func (_Validators *ValidatorsCallerSession) GetValidatorDescription(val common.Address) (string, string, string, string, string, error) {
+	return _Validators.Contract.GetValidatorDescription(&_Validators.CallOpts, val)
 }
 
 // GetValidatorInfo is a free data retrieval call binding the contract method 0x8a11d7c9.
 //
 // Solidity: function getValidatorInfo(address val) view returns(address, uint8, uint256, uint256, uint256, uint256, address[])
-func (_Contracts *ContractsCaller) GetValidatorInfo(opts *bind.CallOpts, val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
+func (_Validators *ValidatorsCaller) GetValidatorInfo(opts *bind.CallOpts, val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "getValidatorInfo", val)
+	err := _Validators.contract.Call(opts, &out, "getValidatorInfo", val)
 
 	if err != nil {
 		return *new(common.Address), *new(uint8), *new(*big.Int), *new(*big.Int), *new(*big.Int), *new(*big.Int), *new([]common.Address), err
@@ -617,23 +617,23 @@ func (_Contracts *ContractsCaller) GetValidatorInfo(opts *bind.CallOpts, val com
 // GetValidatorInfo is a free data retrieval call binding the contract method 0x8a11d7c9.
 //
 // Solidity: function getValidatorInfo(address val) view returns(address, uint8, uint256, uint256, uint256, uint256, address[])
-func (_Contracts *ContractsSession) GetValidatorInfo(val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
-	return _Contracts.Contract.GetValidatorInfo(&_Contracts.CallOpts, val)
+func (_Validators *ValidatorsSession) GetValidatorInfo(val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
+	return _Validators.Contract.GetValidatorInfo(&_Validators.CallOpts, val)
 }
 
 // GetValidatorInfo is a free data retrieval call binding the contract method 0x8a11d7c9.
 //
 // Solidity: function getValidatorInfo(address val) view returns(address, uint8, uint256, uint256, uint256, uint256, address[])
-func (_Contracts *ContractsCallerSession) GetValidatorInfo(val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
-	return _Contracts.Contract.GetValidatorInfo(&_Contracts.CallOpts, val)
+func (_Validators *ValidatorsCallerSession) GetValidatorInfo(val common.Address) (common.Address, uint8, *big.Int, *big.Int, *big.Int, *big.Int, []common.Address, error) {
+	return _Validators.Contract.GetValidatorInfo(&_Validators.CallOpts, val)
 }
 
 // HighestValidatorsSet is a free data retrieval call binding the contract method 0x4b3d500b.
 //
 // Solidity: function highestValidatorsSet(uint256 ) view returns(address)
-func (_Contracts *ContractsCaller) HighestValidatorsSet(opts *bind.CallOpts, arg0 *big.Int) (common.Address, error) {
+func (_Validators *ValidatorsCaller) HighestValidatorsSet(opts *bind.CallOpts, arg0 *big.Int) (common.Address, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "highestValidatorsSet", arg0)
+	err := _Validators.contract.Call(opts, &out, "highestValidatorsSet", arg0)
 
 	if err != nil {
 		return *new(common.Address), err
@@ -648,23 +648,23 @@ func (_Contracts *ContractsCaller) HighestValidatorsSet(opts *bind.CallOpts, arg
 // HighestValidatorsSet is a free data retrieval call binding the contract method 0x4b3d500b.
 //
 // Solidity: function highestValidatorsSet(uint256 ) view returns(address)
-func (_Contracts *ContractsSession) HighestValidatorsSet(arg0 *big.Int) (common.Address, error) {
-	return _Contracts.Contract.HighestValidatorsSet(&_Contracts.CallOpts, arg0)
+func (_Validators *ValidatorsSession) HighestValidatorsSet(arg0 *big.Int) (common.Address, error) {
+	return _Validators.Contract.HighestValidatorsSet(&_Validators.CallOpts, arg0)
 }
 
 // HighestValidatorsSet is a free data retrieval call binding the contract method 0x4b3d500b.
 //
 // Solidity: function highestValidatorsSet(uint256 ) view returns(address)
-func (_Contracts *ContractsCallerSession) HighestValidatorsSet(arg0 *big.Int) (common.Address, error) {
-	return _Contracts.Contract.HighestValidatorsSet(&_Contracts.CallOpts, arg0)
+func (_Validators *ValidatorsCallerSession) HighestValidatorsSet(arg0 *big.Int) (common.Address, error) {
+	return _Validators.Contract.HighestValidatorsSet(&_Validators.CallOpts, arg0)
 }
 
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Contracts *ContractsCaller) Initialized(opts *bind.CallOpts) (bool, error) {
+func (_Validators *ValidatorsCaller) Initialized(opts *bind.CallOpts) (bool, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "initialized")
+	err := _Validators.contract.Call(opts, &out, "initialized")
 
 	if err != nil {
 		return *new(bool), err
@@ -679,23 +679,23 @@ func (_Contracts *ContractsCaller) Initialized(opts *bind.CallOpts) (bool, error
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Contracts *ContractsSession) Initialized() (bool, error) {
-	return _Contracts.Contract.Initialized(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) Initialized() (bool, error) {
+	return _Validators.Contract.Initialized(&_Validators.CallOpts)
 }
 
 // Initialized is a free data retrieval call binding the contract method 0x158ef93e.
 //
 // Solidity: function initialized() view returns(bool)
-func (_Contracts *ContractsCallerSession) Initialized() (bool, error) {
-	return _Contracts.Contract.Initialized(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) Initialized() (bool, error) {
+	return _Validators.Contract.Initialized(&_Validators.CallOpts)
 }
 
 // IsActiveValidator is a free data retrieval call binding the contract method 0x40550a1c.
 //
 // Solidity: function isActiveValidator(address who) view returns(bool)
-func (_Contracts *ContractsCaller) IsActiveValidator(opts *bind.CallOpts, who common.Address) (bool, error) {
+func (_Validators *ValidatorsCaller) IsActiveValidator(opts *bind.CallOpts, who common.Address) (bool, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "isActiveValidator", who)
+	err := _Validators.contract.Call(opts, &out, "isActiveValidator", who)
 
 	if err != nil {
 		return *new(bool), err
@@ -710,23 +710,23 @@ func (_Contracts *ContractsCaller) IsActiveValidator(opts *bind.CallOpts, who co
 // IsActiveValidator is a free data retrieval call binding the contract method 0x40550a1c.
 //
 // Solidity: function isActiveValidator(address who) view returns(bool)
-func (_Contracts *ContractsSession) IsActiveValidator(who common.Address) (bool, error) {
-	return _Contracts.Contract.IsActiveValidator(&_Contracts.CallOpts, who)
+func (_Validators *ValidatorsSession) IsActiveValidator(who common.Address) (bool, error) {
+	return _Validators.Contract.IsActiveValidator(&_Validators.CallOpts, who)
 }
 
 // IsActiveValidator is a free data retrieval call binding the contract method 0x40550a1c.
 //
 // Solidity: function isActiveValidator(address who) view returns(bool)
-func (_Contracts *ContractsCallerSession) IsActiveValidator(who common.Address) (bool, error) {
-	return _Contracts.Contract.IsActiveValidator(&_Contracts.CallOpts, who)
+func (_Validators *ValidatorsCallerSession) IsActiveValidator(who common.Address) (bool, error) {
+	return _Validators.Contract.IsActiveValidator(&_Validators.CallOpts, who)
 }
 
 // IsTopValidator is a free data retrieval call binding the contract method 0x98e3b626.
 //
 // Solidity: function isTopValidator(address who) view returns(bool)
-func (_Contracts *ContractsCaller) IsTopValidator(opts *bind.CallOpts, who common.Address) (bool, error) {
+func (_Validators *ValidatorsCaller) IsTopValidator(opts *bind.CallOpts, who common.Address) (bool, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "isTopValidator", who)
+	err := _Validators.contract.Call(opts, &out, "isTopValidator", who)
 
 	if err != nil {
 		return *new(bool), err
@@ -741,23 +741,23 @@ func (_Contracts *ContractsCaller) IsTopValidator(opts *bind.CallOpts, who commo
 // IsTopValidator is a free data retrieval call binding the contract method 0x98e3b626.
 //
 // Solidity: function isTopValidator(address who) view returns(bool)
-func (_Contracts *ContractsSession) IsTopValidator(who common.Address) (bool, error) {
-	return _Contracts.Contract.IsTopValidator(&_Contracts.CallOpts, who)
+func (_Validators *ValidatorsSession) IsTopValidator(who common.Address) (bool, error) {
+	return _Validators.Contract.IsTopValidator(&_Validators.CallOpts, who)
 }
 
 // IsTopValidator is a free data retrieval call binding the contract method 0x98e3b626.
 //
 // Solidity: function isTopValidator(address who) view returns(bool)
-func (_Contracts *ContractsCallerSession) IsTopValidator(who common.Address) (bool, error) {
-	return _Contracts.Contract.IsTopValidator(&_Contracts.CallOpts, who)
+func (_Validators *ValidatorsCallerSession) IsTopValidator(who common.Address) (bool, error) {
+	return _Validators.Contract.IsTopValidator(&_Validators.CallOpts, who)
 }
 
 // TotalJailedHB is a free data retrieval call binding the contract method 0x1303f7cf.
 //
 // Solidity: function totalJailedHB() view returns(uint256)
-func (_Contracts *ContractsCaller) TotalJailedHB(opts *bind.CallOpts) (*big.Int, error) {
+func (_Validators *ValidatorsCaller) TotalJailedHB(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "totalJailedHB")
+	err := _Validators.contract.Call(opts, &out, "totalJailedHB")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -772,23 +772,23 @@ func (_Contracts *ContractsCaller) TotalJailedHB(opts *bind.CallOpts) (*big.Int,
 // TotalJailedHB is a free data retrieval call binding the contract method 0x1303f7cf.
 //
 // Solidity: function totalJailedHB() view returns(uint256)
-func (_Contracts *ContractsSession) TotalJailedHB() (*big.Int, error) {
-	return _Contracts.Contract.TotalJailedHB(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) TotalJailedHB() (*big.Int, error) {
+	return _Validators.Contract.TotalJailedHB(&_Validators.CallOpts)
 }
 
 // TotalJailedHB is a free data retrieval call binding the contract method 0x1303f7cf.
 //
 // Solidity: function totalJailedHB() view returns(uint256)
-func (_Contracts *ContractsCallerSession) TotalJailedHB() (*big.Int, error) {
-	return _Contracts.Contract.TotalJailedHB(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) TotalJailedHB() (*big.Int, error) {
+	return _Validators.Contract.TotalJailedHB(&_Validators.CallOpts)
 }
 
 // TotalStake is a free data retrieval call binding the contract method 0x8b0e9f3f.
 //
 // Solidity: function totalStake() view returns(uint256)
-func (_Contracts *ContractsCaller) TotalStake(opts *bind.CallOpts) (*big.Int, error) {
+func (_Validators *ValidatorsCaller) TotalStake(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "totalStake")
+	err := _Validators.contract.Call(opts, &out, "totalStake")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -803,23 +803,23 @@ func (_Contracts *ContractsCaller) TotalStake(opts *bind.CallOpts) (*big.Int, er
 // TotalStake is a free data retrieval call binding the contract method 0x8b0e9f3f.
 //
 // Solidity: function totalStake() view returns(uint256)
-func (_Contracts *ContractsSession) TotalStake() (*big.Int, error) {
-	return _Contracts.Contract.TotalStake(&_Contracts.CallOpts)
+func (_Validators *ValidatorsSession) TotalStake() (*big.Int, error) {
+	return _Validators.Contract.TotalStake(&_Validators.CallOpts)
 }
 
 // TotalStake is a free data retrieval call binding the contract method 0x8b0e9f3f.
 //
 // Solidity: function totalStake() view returns(uint256)
-func (_Contracts *ContractsCallerSession) TotalStake() (*big.Int, error) {
-	return _Contracts.Contract.TotalStake(&_Contracts.CallOpts)
+func (_Validators *ValidatorsCallerSession) TotalStake() (*big.Int, error) {
+	return _Validators.Contract.TotalStake(&_Validators.CallOpts)
 }
 
 // ValidateDescription is a free data retrieval call binding the contract method 0xb6c88519.
 //
 // Solidity: function validateDescription(string moniker, string identity, string website, string email, string details) pure returns(bool)
-func (_Contracts *ContractsCaller) ValidateDescription(opts *bind.CallOpts, moniker string, identity string, website string, email string, details string) (bool, error) {
+func (_Validators *ValidatorsCaller) ValidateDescription(opts *bind.CallOpts, moniker string, identity string, website string, email string, details string) (bool, error) {
 	var out []interface{}
-	err := _Contracts.contract.Call(opts, &out, "validateDescription", moniker, identity, website, email, details)
+	err := _Validators.contract.Call(opts, &out, "validateDescription", moniker, identity, website, email, details)
 
 	if err != nil {
 		return *new(bool), err
@@ -834,251 +834,251 @@ func (_Contracts *ContractsCaller) ValidateDescription(opts *bind.CallOpts, moni
 // ValidateDescription is a free data retrieval call binding the contract method 0xb6c88519.
 //
 // Solidity: function validateDescription(string moniker, string identity, string website, string email, string details) pure returns(bool)
-func (_Contracts *ContractsSession) ValidateDescription(moniker string, identity string, website string, email string, details string) (bool, error) {
-	return _Contracts.Contract.ValidateDescription(&_Contracts.CallOpts, moniker, identity, website, email, details)
+func (_Validators *ValidatorsSession) ValidateDescription(moniker string, identity string, website string, email string, details string) (bool, error) {
+	return _Validators.Contract.ValidateDescription(&_Validators.CallOpts, moniker, identity, website, email, details)
 }
 
 // ValidateDescription is a free data retrieval call binding the contract method 0xb6c88519.
 //
 // Solidity: function validateDescription(string moniker, string identity, string website, string email, string details) pure returns(bool)
-func (_Contracts *ContractsCallerSession) ValidateDescription(moniker string, identity string, website string, email string, details string) (bool, error) {
-	return _Contracts.Contract.ValidateDescription(&_Contracts.CallOpts, moniker, identity, website, email, details)
+func (_Validators *ValidatorsCallerSession) ValidateDescription(moniker string, identity string, website string, email string, details string) (bool, error) {
+	return _Validators.Contract.ValidateDescription(&_Validators.CallOpts, moniker, identity, website, email, details)
 }
 
 // CreateOrEditValidator is a paid mutator transaction binding the contract method 0xa406fcb7.
 //
 // Solidity: function createOrEditValidator(address feeAddr, string moniker, string identity, string website, string email, string details) returns(bool)
-func (_Contracts *ContractsTransactor) CreateOrEditValidator(opts *bind.TransactOpts, feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "createOrEditValidator", feeAddr, moniker, identity, website, email, details)
+func (_Validators *ValidatorsTransactor) CreateOrEditValidator(opts *bind.TransactOpts, feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "createOrEditValidator", feeAddr, moniker, identity, website, email, details)
 }
 
 // CreateOrEditValidator is a paid mutator transaction binding the contract method 0xa406fcb7.
 //
 // Solidity: function createOrEditValidator(address feeAddr, string moniker, string identity, string website, string email, string details) returns(bool)
-func (_Contracts *ContractsSession) CreateOrEditValidator(feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
-	return _Contracts.Contract.CreateOrEditValidator(&_Contracts.TransactOpts, feeAddr, moniker, identity, website, email, details)
+func (_Validators *ValidatorsSession) CreateOrEditValidator(feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
+	return _Validators.Contract.CreateOrEditValidator(&_Validators.TransactOpts, feeAddr, moniker, identity, website, email, details)
 }
 
 // CreateOrEditValidator is a paid mutator transaction binding the contract method 0xa406fcb7.
 //
 // Solidity: function createOrEditValidator(address feeAddr, string moniker, string identity, string website, string email, string details) returns(bool)
-func (_Contracts *ContractsTransactorSession) CreateOrEditValidator(feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
-	return _Contracts.Contract.CreateOrEditValidator(&_Contracts.TransactOpts, feeAddr, moniker, identity, website, email, details)
+func (_Validators *ValidatorsTransactorSession) CreateOrEditValidator(feeAddr common.Address, moniker string, identity string, website string, email string, details string) (*types.Transaction, error) {
+	return _Validators.Contract.CreateOrEditValidator(&_Validators.TransactOpts, feeAddr, moniker, identity, website, email, details)
 }
 
 // DistributeBlockReward is a paid mutator transaction binding the contract method 0xd6c0edad.
 //
 // Solidity: function distributeBlockReward() payable returns()
-func (_Contracts *ContractsTransactor) DistributeBlockReward(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "distributeBlockReward")
+func (_Validators *ValidatorsTransactor) DistributeBlockReward(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "distributeBlockReward")
 }
 
 // DistributeBlockReward is a paid mutator transaction binding the contract method 0xd6c0edad.
 //
 // Solidity: function distributeBlockReward() payable returns()
-func (_Contracts *ContractsSession) DistributeBlockReward() (*types.Transaction, error) {
-	return _Contracts.Contract.DistributeBlockReward(&_Contracts.TransactOpts)
+func (_Validators *ValidatorsSession) DistributeBlockReward() (*types.Transaction, error) {
+	return _Validators.Contract.DistributeBlockReward(&_Validators.TransactOpts)
 }
 
 // DistributeBlockReward is a paid mutator transaction binding the contract method 0xd6c0edad.
 //
 // Solidity: function distributeBlockReward() payable returns()
-func (_Contracts *ContractsTransactorSession) DistributeBlockReward() (*types.Transaction, error) {
-	return _Contracts.Contract.DistributeBlockReward(&_Contracts.TransactOpts)
+func (_Validators *ValidatorsTransactorSession) DistributeBlockReward() (*types.Transaction, error) {
+	return _Validators.Contract.DistributeBlockReward(&_Validators.TransactOpts)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Contracts *ContractsTransactor) Initialize(opts *bind.TransactOpts, vals []common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "initialize", vals)
+func (_Validators *ValidatorsTransactor) Initialize(opts *bind.TransactOpts, vals []common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "initialize", vals)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Contracts *ContractsSession) Initialize(vals []common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Initialize(&_Contracts.TransactOpts, vals)
+func (_Validators *ValidatorsSession) Initialize(vals []common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Initialize(&_Validators.TransactOpts, vals)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0xa224cee7.
 //
 // Solidity: function initialize(address[] vals) returns()
-func (_Contracts *ContractsTransactorSession) Initialize(vals []common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Initialize(&_Contracts.TransactOpts, vals)
+func (_Validators *ValidatorsTransactorSession) Initialize(vals []common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Initialize(&_Validators.TransactOpts, vals)
 }
 
 // RemoveValidator is a paid mutator transaction binding the contract method 0x40a141ff.
 //
 // Solidity: function removeValidator(address val) returns()
-func (_Contracts *ContractsTransactor) RemoveValidator(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "removeValidator", val)
+func (_Validators *ValidatorsTransactor) RemoveValidator(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "removeValidator", val)
 }
 
 // RemoveValidator is a paid mutator transaction binding the contract method 0x40a141ff.
 //
 // Solidity: function removeValidator(address val) returns()
-func (_Contracts *ContractsSession) RemoveValidator(val common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.RemoveValidator(&_Contracts.TransactOpts, val)
+func (_Validators *ValidatorsSession) RemoveValidator(val common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.RemoveValidator(&_Validators.TransactOpts, val)
 }
 
 // RemoveValidator is a paid mutator transaction binding the contract method 0x40a141ff.
 //
 // Solidity: function removeValidator(address val) returns()
-func (_Contracts *ContractsTransactorSession) RemoveValidator(val common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.RemoveValidator(&_Contracts.TransactOpts, val)
+func (_Validators *ValidatorsTransactorSession) RemoveValidator(val common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.RemoveValidator(&_Validators.TransactOpts, val)
 }
 
 // RemoveValidatorIncoming is a paid mutator transaction binding the contract method 0x5dd09590.
 //
 // Solidity: function removeValidatorIncoming(address val) returns()
-func (_Contracts *ContractsTransactor) RemoveValidatorIncoming(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "removeValidatorIncoming", val)
+func (_Validators *ValidatorsTransactor) RemoveValidatorIncoming(opts *bind.TransactOpts, val common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "removeValidatorIncoming", val)
 }
 
 // RemoveValidatorIncoming is a paid mutator transaction binding the contract method 0x5dd09590.
 //
 // Solidity: function removeValidatorIncoming(address val) returns()
-func (_Contracts *ContractsSession) RemoveValidatorIncoming(val common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.RemoveValidatorIncoming(&_Contracts.TransactOpts, val)
+func (_Validators *ValidatorsSession) RemoveValidatorIncoming(val common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.RemoveValidatorIncoming(&_Validators.TransactOpts, val)
 }
 
 // RemoveValidatorIncoming is a paid mutator transaction binding the contract method 0x5dd09590.
 //
 // Solidity: function removeValidatorIncoming(address val) returns()
-func (_Contracts *ContractsTransactorSession) RemoveValidatorIncoming(val common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.RemoveValidatorIncoming(&_Contracts.TransactOpts, val)
+func (_Validators *ValidatorsTransactorSession) RemoveValidatorIncoming(val common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.RemoveValidatorIncoming(&_Validators.TransactOpts, val)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x26476204.
 //
 // Solidity: function stake(address validator) payable returns(bool)
-func (_Contracts *ContractsTransactor) Stake(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "stake", validator)
+func (_Validators *ValidatorsTransactor) Stake(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "stake", validator)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x26476204.
 //
 // Solidity: function stake(address validator) payable returns(bool)
-func (_Contracts *ContractsSession) Stake(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Stake(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsSession) Stake(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Stake(&_Validators.TransactOpts, validator)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x26476204.
 //
 // Solidity: function stake(address validator) payable returns(bool)
-func (_Contracts *ContractsTransactorSession) Stake(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Stake(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsTransactorSession) Stake(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Stake(&_Validators.TransactOpts, validator)
 }
 
 // TryReactive is a paid mutator transaction binding the contract method 0x82bd3d92.
 //
 // Solidity: function tryReactive(address validator) returns(bool)
-func (_Contracts *ContractsTransactor) TryReactive(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "tryReactive", validator)
+func (_Validators *ValidatorsTransactor) TryReactive(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "tryReactive", validator)
 }
 
 // TryReactive is a paid mutator transaction binding the contract method 0x82bd3d92.
 //
 // Solidity: function tryReactive(address validator) returns(bool)
-func (_Contracts *ContractsSession) TryReactive(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.TryReactive(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsSession) TryReactive(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.TryReactive(&_Validators.TransactOpts, validator)
 }
 
 // TryReactive is a paid mutator transaction binding the contract method 0x82bd3d92.
 //
 // Solidity: function tryReactive(address validator) returns(bool)
-func (_Contracts *ContractsTransactorSession) TryReactive(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.TryReactive(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsTransactorSession) TryReactive(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.TryReactive(&_Validators.TransactOpts, validator)
 }
 
 // Unstake is a paid mutator transaction binding the contract method 0xf2888dbb.
 //
 // Solidity: function unstake(address validator) returns(bool)
-func (_Contracts *ContractsTransactor) Unstake(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "unstake", validator)
+func (_Validators *ValidatorsTransactor) Unstake(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "unstake", validator)
 }
 
 // Unstake is a paid mutator transaction binding the contract method 0xf2888dbb.
 //
 // Solidity: function unstake(address validator) returns(bool)
-func (_Contracts *ContractsSession) Unstake(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Unstake(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsSession) Unstake(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Unstake(&_Validators.TransactOpts, validator)
 }
 
 // Unstake is a paid mutator transaction binding the contract method 0xf2888dbb.
 //
 // Solidity: function unstake(address validator) returns(bool)
-func (_Contracts *ContractsTransactorSession) Unstake(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.Unstake(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsTransactorSession) Unstake(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.Unstake(&_Validators.TransactOpts, validator)
 }
 
 // UpdateActiveValidatorSet is a paid mutator transaction binding the contract method 0x6846992a.
 //
 // Solidity: function updateActiveValidatorSet(address[] newSet, uint256 epoch) returns()
-func (_Contracts *ContractsTransactor) UpdateActiveValidatorSet(opts *bind.TransactOpts, newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "updateActiveValidatorSet", newSet, epoch)
+func (_Validators *ValidatorsTransactor) UpdateActiveValidatorSet(opts *bind.TransactOpts, newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "updateActiveValidatorSet", newSet, epoch)
 }
 
 // UpdateActiveValidatorSet is a paid mutator transaction binding the contract method 0x6846992a.
 //
 // Solidity: function updateActiveValidatorSet(address[] newSet, uint256 epoch) returns()
-func (_Contracts *ContractsSession) UpdateActiveValidatorSet(newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
-	return _Contracts.Contract.UpdateActiveValidatorSet(&_Contracts.TransactOpts, newSet, epoch)
+func (_Validators *ValidatorsSession) UpdateActiveValidatorSet(newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
+	return _Validators.Contract.UpdateActiveValidatorSet(&_Validators.TransactOpts, newSet, epoch)
 }
 
 // UpdateActiveValidatorSet is a paid mutator transaction binding the contract method 0x6846992a.
 //
 // Solidity: function updateActiveValidatorSet(address[] newSet, uint256 epoch) returns()
-func (_Contracts *ContractsTransactorSession) UpdateActiveValidatorSet(newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
-	return _Contracts.Contract.UpdateActiveValidatorSet(&_Contracts.TransactOpts, newSet, epoch)
+func (_Validators *ValidatorsTransactorSession) UpdateActiveValidatorSet(newSet []common.Address, epoch *big.Int) (*types.Transaction, error) {
+	return _Validators.Contract.UpdateActiveValidatorSet(&_Validators.TransactOpts, newSet, epoch)
 }
 
 // WithdrawProfits is a paid mutator transaction binding the contract method 0x00362a77.
 //
 // Solidity: function withdrawProfits(address validator) returns(bool)
-func (_Contracts *ContractsTransactor) WithdrawProfits(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "withdrawProfits", validator)
+func (_Validators *ValidatorsTransactor) WithdrawProfits(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "withdrawProfits", validator)
 }
 
 // WithdrawProfits is a paid mutator transaction binding the contract method 0x00362a77.
 //
 // Solidity: function withdrawProfits(address validator) returns(bool)
-func (_Contracts *ContractsSession) WithdrawProfits(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.WithdrawProfits(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsSession) WithdrawProfits(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.WithdrawProfits(&_Validators.TransactOpts, validator)
 }
 
 // WithdrawProfits is a paid mutator transaction binding the contract method 0x00362a77.
 //
 // Solidity: function withdrawProfits(address validator) returns(bool)
-func (_Contracts *ContractsTransactorSession) WithdrawProfits(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.WithdrawProfits(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsTransactorSession) WithdrawProfits(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.WithdrawProfits(&_Validators.TransactOpts, validator)
 }
 
 // WithdrawStaking is a paid mutator transaction binding the contract method 0x222d3b05.
 //
 // Solidity: function withdrawStaking(address validator) returns(bool)
-func (_Contracts *ContractsTransactor) WithdrawStaking(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Contracts.contract.Transact(opts, "withdrawStaking", validator)
+func (_Validators *ValidatorsTransactor) WithdrawStaking(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
+	return _Validators.contract.Transact(opts, "withdrawStaking", validator)
 }
 
 // WithdrawStaking is a paid mutator transaction binding the contract method 0x222d3b05.
 //
 // Solidity: function withdrawStaking(address validator) returns(bool)
-func (_Contracts *ContractsSession) WithdrawStaking(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.WithdrawStaking(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsSession) WithdrawStaking(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.WithdrawStaking(&_Validators.TransactOpts, validator)
 }
 
 // WithdrawStaking is a paid mutator transaction binding the contract method 0x222d3b05.
 //
 // Solidity: function withdrawStaking(address validator) returns(bool)
-func (_Contracts *ContractsTransactorSession) WithdrawStaking(validator common.Address) (*types.Transaction, error) {
-	return _Contracts.Contract.WithdrawStaking(&_Contracts.TransactOpts, validator)
+func (_Validators *ValidatorsTransactorSession) WithdrawStaking(validator common.Address) (*types.Transaction, error) {
+	return _Validators.Contract.WithdrawStaking(&_Validators.TransactOpts, validator)
 }
 
-// ContractsLogAddToTopValidatorsIterator is returned from FilterLogAddToTopValidators and is used to iterate over the raw logs and unpacked data for LogAddToTopValidators events raised by the Contracts contract.
-type ContractsLogAddToTopValidatorsIterator struct {
-	Event *ContractsLogAddToTopValidators // Event containing the contract specifics and raw log
+// ValidatorsLogAddToTopValidatorsIterator is returned from FilterLogAddToTopValidators and is used to iterate over the raw logs and unpacked data for LogAddToTopValidators events raised by the Validators contract.
+type ValidatorsLogAddToTopValidatorsIterator struct {
+	Event *ValidatorsLogAddToTopValidators // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1092,7 +1092,7 @@ type ContractsLogAddToTopValidatorsIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogAddToTopValidatorsIterator) Next() bool {
+func (it *ValidatorsLogAddToTopValidatorsIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1101,7 +1101,7 @@ func (it *ContractsLogAddToTopValidatorsIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogAddToTopValidators)
+			it.Event = new(ValidatorsLogAddToTopValidators)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1116,7 +1116,7 @@ func (it *ContractsLogAddToTopValidatorsIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogAddToTopValidators)
+		it.Event = new(ValidatorsLogAddToTopValidators)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1132,19 +1132,19 @@ func (it *ContractsLogAddToTopValidatorsIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogAddToTopValidatorsIterator) Error() error {
+func (it *ValidatorsLogAddToTopValidatorsIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogAddToTopValidatorsIterator) Close() error {
+func (it *ValidatorsLogAddToTopValidatorsIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogAddToTopValidators represents a LogAddToTopValidators event raised by the Contracts contract.
-type ContractsLogAddToTopValidators struct {
+// ValidatorsLogAddToTopValidators represents a LogAddToTopValidators event raised by the Validators contract.
+type ValidatorsLogAddToTopValidators struct {
 	Val  common.Address
 	Time *big.Int
 	Raw  types.Log // Blockchain specific contextual infos
@@ -1153,31 +1153,31 @@ type ContractsLogAddToTopValidators struct {
 // FilterLogAddToTopValidators is a free log retrieval operation binding the contract event 0x1e3310ad6891b30e03874ec3d1422a6386c5da63d9faf595f5d99eeaf443b99a.
 //
 // Solidity: event LogAddToTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogAddToTopValidators(opts *bind.FilterOpts, val []common.Address) (*ContractsLogAddToTopValidatorsIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogAddToTopValidators(opts *bind.FilterOpts, val []common.Address) (*ValidatorsLogAddToTopValidatorsIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogAddToTopValidators", valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogAddToTopValidators", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogAddToTopValidatorsIterator{contract: _Contracts.contract, event: "LogAddToTopValidators", logs: logs, sub: sub}, nil
+	return &ValidatorsLogAddToTopValidatorsIterator{contract: _Validators.contract, event: "LogAddToTopValidators", logs: logs, sub: sub}, nil
 }
 
 // WatchLogAddToTopValidators is a free log subscription operation binding the contract event 0x1e3310ad6891b30e03874ec3d1422a6386c5da63d9faf595f5d99eeaf443b99a.
 //
 // Solidity: event LogAddToTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogAddToTopValidators(opts *bind.WatchOpts, sink chan<- *ContractsLogAddToTopValidators, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogAddToTopValidators(opts *bind.WatchOpts, sink chan<- *ValidatorsLogAddToTopValidators, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogAddToTopValidators", valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogAddToTopValidators", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1187,8 +1187,8 @@ func (_Contracts *ContractsFilterer) WatchLogAddToTopValidators(opts *bind.Watch
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogAddToTopValidators)
-				if err := _Contracts.contract.UnpackLog(event, "LogAddToTopValidators", log); err != nil {
+				event := new(ValidatorsLogAddToTopValidators)
+				if err := _Validators.contract.UnpackLog(event, "LogAddToTopValidators", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1212,18 +1212,18 @@ func (_Contracts *ContractsFilterer) WatchLogAddToTopValidators(opts *bind.Watch
 // ParseLogAddToTopValidators is a log parse operation binding the contract event 0x1e3310ad6891b30e03874ec3d1422a6386c5da63d9faf595f5d99eeaf443b99a.
 //
 // Solidity: event LogAddToTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogAddToTopValidators(log types.Log) (*ContractsLogAddToTopValidators, error) {
-	event := new(ContractsLogAddToTopValidators)
-	if err := _Contracts.contract.UnpackLog(event, "LogAddToTopValidators", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogAddToTopValidators(log types.Log) (*ValidatorsLogAddToTopValidators, error) {
+	event := new(ValidatorsLogAddToTopValidators)
+	if err := _Validators.contract.UnpackLog(event, "LogAddToTopValidators", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogCreateValidatorIterator is returned from FilterLogCreateValidator and is used to iterate over the raw logs and unpacked data for LogCreateValidator events raised by the Contracts contract.
-type ContractsLogCreateValidatorIterator struct {
-	Event *ContractsLogCreateValidator // Event containing the contract specifics and raw log
+// ValidatorsLogCreateValidatorIterator is returned from FilterLogCreateValidator and is used to iterate over the raw logs and unpacked data for LogCreateValidator events raised by the Validators contract.
+type ValidatorsLogCreateValidatorIterator struct {
+	Event *ValidatorsLogCreateValidator // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1237,7 +1237,7 @@ type ContractsLogCreateValidatorIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogCreateValidatorIterator) Next() bool {
+func (it *ValidatorsLogCreateValidatorIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1246,7 +1246,7 @@ func (it *ContractsLogCreateValidatorIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogCreateValidator)
+			it.Event = new(ValidatorsLogCreateValidator)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1261,7 +1261,7 @@ func (it *ContractsLogCreateValidatorIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogCreateValidator)
+		it.Event = new(ValidatorsLogCreateValidator)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1277,19 +1277,19 @@ func (it *ContractsLogCreateValidatorIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogCreateValidatorIterator) Error() error {
+func (it *ValidatorsLogCreateValidatorIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogCreateValidatorIterator) Close() error {
+func (it *ValidatorsLogCreateValidatorIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogCreateValidator represents a LogCreateValidator event raised by the Contracts contract.
-type ContractsLogCreateValidator struct {
+// ValidatorsLogCreateValidator represents a LogCreateValidator event raised by the Validators contract.
+type ValidatorsLogCreateValidator struct {
 	Val  common.Address
 	Fee  common.Address
 	Time *big.Int
@@ -1299,7 +1299,7 @@ type ContractsLogCreateValidator struct {
 // FilterLogCreateValidator is a free log retrieval operation binding the contract event 0x887eec9d757b7247dd8e51198f9d1b8f27979bceb34bdcc1bffd4ec5ec736c22.
 //
 // Solidity: event LogCreateValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogCreateValidator(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ContractsLogCreateValidatorIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogCreateValidator(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ValidatorsLogCreateValidatorIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -1310,17 +1310,17 @@ func (_Contracts *ContractsFilterer) FilterLogCreateValidator(opts *bind.FilterO
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogCreateValidator", valRule, feeRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogCreateValidator", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogCreateValidatorIterator{contract: _Contracts.contract, event: "LogCreateValidator", logs: logs, sub: sub}, nil
+	return &ValidatorsLogCreateValidatorIterator{contract: _Validators.contract, event: "LogCreateValidator", logs: logs, sub: sub}, nil
 }
 
 // WatchLogCreateValidator is a free log subscription operation binding the contract event 0x887eec9d757b7247dd8e51198f9d1b8f27979bceb34bdcc1bffd4ec5ec736c22.
 //
 // Solidity: event LogCreateValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogCreateValidator(opts *bind.WatchOpts, sink chan<- *ContractsLogCreateValidator, val []common.Address, fee []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogCreateValidator(opts *bind.WatchOpts, sink chan<- *ValidatorsLogCreateValidator, val []common.Address, fee []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -1331,7 +1331,7 @@ func (_Contracts *ContractsFilterer) WatchLogCreateValidator(opts *bind.WatchOpt
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogCreateValidator", valRule, feeRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogCreateValidator", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1341,8 +1341,8 @@ func (_Contracts *ContractsFilterer) WatchLogCreateValidator(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogCreateValidator)
-				if err := _Contracts.contract.UnpackLog(event, "LogCreateValidator", log); err != nil {
+				event := new(ValidatorsLogCreateValidator)
+				if err := _Validators.contract.UnpackLog(event, "LogCreateValidator", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1366,18 +1366,18 @@ func (_Contracts *ContractsFilterer) WatchLogCreateValidator(opts *bind.WatchOpt
 // ParseLogCreateValidator is a log parse operation binding the contract event 0x887eec9d757b7247dd8e51198f9d1b8f27979bceb34bdcc1bffd4ec5ec736c22.
 //
 // Solidity: event LogCreateValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogCreateValidator(log types.Log) (*ContractsLogCreateValidator, error) {
-	event := new(ContractsLogCreateValidator)
-	if err := _Contracts.contract.UnpackLog(event, "LogCreateValidator", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogCreateValidator(log types.Log) (*ValidatorsLogCreateValidator, error) {
+	event := new(ValidatorsLogCreateValidator)
+	if err := _Validators.contract.UnpackLog(event, "LogCreateValidator", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogDistributeBlockRewardIterator is returned from FilterLogDistributeBlockReward and is used to iterate over the raw logs and unpacked data for LogDistributeBlockReward events raised by the Contracts contract.
-type ContractsLogDistributeBlockRewardIterator struct {
-	Event *ContractsLogDistributeBlockReward // Event containing the contract specifics and raw log
+// ValidatorsLogDistributeBlockRewardIterator is returned from FilterLogDistributeBlockReward and is used to iterate over the raw logs and unpacked data for LogDistributeBlockReward events raised by the Validators contract.
+type ValidatorsLogDistributeBlockRewardIterator struct {
+	Event *ValidatorsLogDistributeBlockReward // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1391,7 +1391,7 @@ type ContractsLogDistributeBlockRewardIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogDistributeBlockRewardIterator) Next() bool {
+func (it *ValidatorsLogDistributeBlockRewardIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1400,7 +1400,7 @@ func (it *ContractsLogDistributeBlockRewardIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogDistributeBlockReward)
+			it.Event = new(ValidatorsLogDistributeBlockReward)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1415,7 +1415,7 @@ func (it *ContractsLogDistributeBlockRewardIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogDistributeBlockReward)
+		it.Event = new(ValidatorsLogDistributeBlockReward)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1431,19 +1431,19 @@ func (it *ContractsLogDistributeBlockRewardIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogDistributeBlockRewardIterator) Error() error {
+func (it *ValidatorsLogDistributeBlockRewardIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogDistributeBlockRewardIterator) Close() error {
+func (it *ValidatorsLogDistributeBlockRewardIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogDistributeBlockReward represents a LogDistributeBlockReward event raised by the Contracts contract.
-type ContractsLogDistributeBlockReward struct {
+// ValidatorsLogDistributeBlockReward represents a LogDistributeBlockReward event raised by the Validators contract.
+type ValidatorsLogDistributeBlockReward struct {
 	Coinbase    common.Address
 	BlockReward *big.Int
 	Time        *big.Int
@@ -1453,31 +1453,31 @@ type ContractsLogDistributeBlockReward struct {
 // FilterLogDistributeBlockReward is a free log retrieval operation binding the contract event 0x7dc4e5df59513708dca355b8706273a5df7b810a4cec8019f2a4b9bb166a1a04.
 //
 // Solidity: event LogDistributeBlockReward(address indexed coinbase, uint256 blockReward, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogDistributeBlockReward(opts *bind.FilterOpts, coinbase []common.Address) (*ContractsLogDistributeBlockRewardIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogDistributeBlockReward(opts *bind.FilterOpts, coinbase []common.Address) (*ValidatorsLogDistributeBlockRewardIterator, error) {
 
 	var coinbaseRule []interface{}
 	for _, coinbaseItem := range coinbase {
 		coinbaseRule = append(coinbaseRule, coinbaseItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogDistributeBlockReward", coinbaseRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogDistributeBlockReward", coinbaseRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogDistributeBlockRewardIterator{contract: _Contracts.contract, event: "LogDistributeBlockReward", logs: logs, sub: sub}, nil
+	return &ValidatorsLogDistributeBlockRewardIterator{contract: _Validators.contract, event: "LogDistributeBlockReward", logs: logs, sub: sub}, nil
 }
 
 // WatchLogDistributeBlockReward is a free log subscription operation binding the contract event 0x7dc4e5df59513708dca355b8706273a5df7b810a4cec8019f2a4b9bb166a1a04.
 //
 // Solidity: event LogDistributeBlockReward(address indexed coinbase, uint256 blockReward, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogDistributeBlockReward(opts *bind.WatchOpts, sink chan<- *ContractsLogDistributeBlockReward, coinbase []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogDistributeBlockReward(opts *bind.WatchOpts, sink chan<- *ValidatorsLogDistributeBlockReward, coinbase []common.Address) (event.Subscription, error) {
 
 	var coinbaseRule []interface{}
 	for _, coinbaseItem := range coinbase {
 		coinbaseRule = append(coinbaseRule, coinbaseItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogDistributeBlockReward", coinbaseRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogDistributeBlockReward", coinbaseRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1487,8 +1487,8 @@ func (_Contracts *ContractsFilterer) WatchLogDistributeBlockReward(opts *bind.Wa
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogDistributeBlockReward)
-				if err := _Contracts.contract.UnpackLog(event, "LogDistributeBlockReward", log); err != nil {
+				event := new(ValidatorsLogDistributeBlockReward)
+				if err := _Validators.contract.UnpackLog(event, "LogDistributeBlockReward", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1512,18 +1512,18 @@ func (_Contracts *ContractsFilterer) WatchLogDistributeBlockReward(opts *bind.Wa
 // ParseLogDistributeBlockReward is a log parse operation binding the contract event 0x7dc4e5df59513708dca355b8706273a5df7b810a4cec8019f2a4b9bb166a1a04.
 //
 // Solidity: event LogDistributeBlockReward(address indexed coinbase, uint256 blockReward, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogDistributeBlockReward(log types.Log) (*ContractsLogDistributeBlockReward, error) {
-	event := new(ContractsLogDistributeBlockReward)
-	if err := _Contracts.contract.UnpackLog(event, "LogDistributeBlockReward", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogDistributeBlockReward(log types.Log) (*ValidatorsLogDistributeBlockReward, error) {
+	event := new(ValidatorsLogDistributeBlockReward)
+	if err := _Validators.contract.UnpackLog(event, "LogDistributeBlockReward", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogEditValidatorIterator is returned from FilterLogEditValidator and is used to iterate over the raw logs and unpacked data for LogEditValidator events raised by the Contracts contract.
-type ContractsLogEditValidatorIterator struct {
-	Event *ContractsLogEditValidator // Event containing the contract specifics and raw log
+// ValidatorsLogEditValidatorIterator is returned from FilterLogEditValidator and is used to iterate over the raw logs and unpacked data for LogEditValidator events raised by the Validators contract.
+type ValidatorsLogEditValidatorIterator struct {
+	Event *ValidatorsLogEditValidator // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1537,7 +1537,7 @@ type ContractsLogEditValidatorIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogEditValidatorIterator) Next() bool {
+func (it *ValidatorsLogEditValidatorIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1546,7 +1546,7 @@ func (it *ContractsLogEditValidatorIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogEditValidator)
+			it.Event = new(ValidatorsLogEditValidator)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1561,7 +1561,7 @@ func (it *ContractsLogEditValidatorIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogEditValidator)
+		it.Event = new(ValidatorsLogEditValidator)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1577,19 +1577,19 @@ func (it *ContractsLogEditValidatorIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogEditValidatorIterator) Error() error {
+func (it *ValidatorsLogEditValidatorIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogEditValidatorIterator) Close() error {
+func (it *ValidatorsLogEditValidatorIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogEditValidator represents a LogEditValidator event raised by the Contracts contract.
-type ContractsLogEditValidator struct {
+// ValidatorsLogEditValidator represents a LogEditValidator event raised by the Validators contract.
+type ValidatorsLogEditValidator struct {
 	Val  common.Address
 	Fee  common.Address
 	Time *big.Int
@@ -1599,7 +1599,7 @@ type ContractsLogEditValidator struct {
 // FilterLogEditValidator is a free log retrieval operation binding the contract event 0xb8421f65501371f54d58de1937ff1e1ccdb76423ef6f84acea1814a0f6362ca0.
 //
 // Solidity: event LogEditValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogEditValidator(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ContractsLogEditValidatorIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogEditValidator(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ValidatorsLogEditValidatorIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -1610,17 +1610,17 @@ func (_Contracts *ContractsFilterer) FilterLogEditValidator(opts *bind.FilterOpt
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogEditValidator", valRule, feeRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogEditValidator", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogEditValidatorIterator{contract: _Contracts.contract, event: "LogEditValidator", logs: logs, sub: sub}, nil
+	return &ValidatorsLogEditValidatorIterator{contract: _Validators.contract, event: "LogEditValidator", logs: logs, sub: sub}, nil
 }
 
 // WatchLogEditValidator is a free log subscription operation binding the contract event 0xb8421f65501371f54d58de1937ff1e1ccdb76423ef6f84acea1814a0f6362ca0.
 //
 // Solidity: event LogEditValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogEditValidator(opts *bind.WatchOpts, sink chan<- *ContractsLogEditValidator, val []common.Address, fee []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogEditValidator(opts *bind.WatchOpts, sink chan<- *ValidatorsLogEditValidator, val []common.Address, fee []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -1631,7 +1631,7 @@ func (_Contracts *ContractsFilterer) WatchLogEditValidator(opts *bind.WatchOpts,
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogEditValidator", valRule, feeRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogEditValidator", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1641,8 +1641,8 @@ func (_Contracts *ContractsFilterer) WatchLogEditValidator(opts *bind.WatchOpts,
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogEditValidator)
-				if err := _Contracts.contract.UnpackLog(event, "LogEditValidator", log); err != nil {
+				event := new(ValidatorsLogEditValidator)
+				if err := _Validators.contract.UnpackLog(event, "LogEditValidator", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1666,18 +1666,18 @@ func (_Contracts *ContractsFilterer) WatchLogEditValidator(opts *bind.WatchOpts,
 // ParseLogEditValidator is a log parse operation binding the contract event 0xb8421f65501371f54d58de1937ff1e1ccdb76423ef6f84acea1814a0f6362ca0.
 //
 // Solidity: event LogEditValidator(address indexed val, address indexed fee, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogEditValidator(log types.Log) (*ContractsLogEditValidator, error) {
-	event := new(ContractsLogEditValidator)
-	if err := _Contracts.contract.UnpackLog(event, "LogEditValidator", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogEditValidator(log types.Log) (*ValidatorsLogEditValidator, error) {
+	event := new(ValidatorsLogEditValidator)
+	if err := _Validators.contract.UnpackLog(event, "LogEditValidator", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogReactiveIterator is returned from FilterLogReactive and is used to iterate over the raw logs and unpacked data for LogReactive events raised by the Contracts contract.
-type ContractsLogReactiveIterator struct {
-	Event *ContractsLogReactive // Event containing the contract specifics and raw log
+// ValidatorsLogReactiveIterator is returned from FilterLogReactive and is used to iterate over the raw logs and unpacked data for LogReactive events raised by the Validators contract.
+type ValidatorsLogReactiveIterator struct {
+	Event *ValidatorsLogReactive // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1691,7 +1691,7 @@ type ContractsLogReactiveIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogReactiveIterator) Next() bool {
+func (it *ValidatorsLogReactiveIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1700,7 +1700,7 @@ func (it *ContractsLogReactiveIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogReactive)
+			it.Event = new(ValidatorsLogReactive)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1715,7 +1715,7 @@ func (it *ContractsLogReactiveIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogReactive)
+		it.Event = new(ValidatorsLogReactive)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1731,19 +1731,19 @@ func (it *ContractsLogReactiveIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogReactiveIterator) Error() error {
+func (it *ValidatorsLogReactiveIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogReactiveIterator) Close() error {
+func (it *ValidatorsLogReactiveIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogReactive represents a LogReactive event raised by the Contracts contract.
-type ContractsLogReactive struct {
+// ValidatorsLogReactive represents a LogReactive event raised by the Validators contract.
+type ValidatorsLogReactive struct {
 	Val  common.Address
 	Time *big.Int
 	Raw  types.Log // Blockchain specific contextual infos
@@ -1752,31 +1752,31 @@ type ContractsLogReactive struct {
 // FilterLogReactive is a free log retrieval operation binding the contract event 0xd8b2c426ec1be69ca7583d26b1e893946e3227430d3ebc3bd64d9e1c469cb400.
 //
 // Solidity: event LogReactive(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogReactive(opts *bind.FilterOpts, val []common.Address) (*ContractsLogReactiveIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogReactive(opts *bind.FilterOpts, val []common.Address) (*ValidatorsLogReactiveIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogReactive", valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogReactive", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogReactiveIterator{contract: _Contracts.contract, event: "LogReactive", logs: logs, sub: sub}, nil
+	return &ValidatorsLogReactiveIterator{contract: _Validators.contract, event: "LogReactive", logs: logs, sub: sub}, nil
 }
 
 // WatchLogReactive is a free log subscription operation binding the contract event 0xd8b2c426ec1be69ca7583d26b1e893946e3227430d3ebc3bd64d9e1c469cb400.
 //
 // Solidity: event LogReactive(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogReactive(opts *bind.WatchOpts, sink chan<- *ContractsLogReactive, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogReactive(opts *bind.WatchOpts, sink chan<- *ValidatorsLogReactive, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogReactive", valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogReactive", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1786,8 +1786,8 @@ func (_Contracts *ContractsFilterer) WatchLogReactive(opts *bind.WatchOpts, sink
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogReactive)
-				if err := _Contracts.contract.UnpackLog(event, "LogReactive", log); err != nil {
+				event := new(ValidatorsLogReactive)
+				if err := _Validators.contract.UnpackLog(event, "LogReactive", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1811,18 +1811,18 @@ func (_Contracts *ContractsFilterer) WatchLogReactive(opts *bind.WatchOpts, sink
 // ParseLogReactive is a log parse operation binding the contract event 0xd8b2c426ec1be69ca7583d26b1e893946e3227430d3ebc3bd64d9e1c469cb400.
 //
 // Solidity: event LogReactive(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogReactive(log types.Log) (*ContractsLogReactive, error) {
-	event := new(ContractsLogReactive)
-	if err := _Contracts.contract.UnpackLog(event, "LogReactive", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogReactive(log types.Log) (*ValidatorsLogReactive, error) {
+	event := new(ValidatorsLogReactive)
+	if err := _Validators.contract.UnpackLog(event, "LogReactive", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogRemoveFromTopValidatorsIterator is returned from FilterLogRemoveFromTopValidators and is used to iterate over the raw logs and unpacked data for LogRemoveFromTopValidators events raised by the Contracts contract.
-type ContractsLogRemoveFromTopValidatorsIterator struct {
-	Event *ContractsLogRemoveFromTopValidators // Event containing the contract specifics and raw log
+// ValidatorsLogRemoveFromTopValidatorsIterator is returned from FilterLogRemoveFromTopValidators and is used to iterate over the raw logs and unpacked data for LogRemoveFromTopValidators events raised by the Validators contract.
+type ValidatorsLogRemoveFromTopValidatorsIterator struct {
+	Event *ValidatorsLogRemoveFromTopValidators // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1836,7 +1836,7 @@ type ContractsLogRemoveFromTopValidatorsIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogRemoveFromTopValidatorsIterator) Next() bool {
+func (it *ValidatorsLogRemoveFromTopValidatorsIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1845,7 +1845,7 @@ func (it *ContractsLogRemoveFromTopValidatorsIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogRemoveFromTopValidators)
+			it.Event = new(ValidatorsLogRemoveFromTopValidators)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1860,7 +1860,7 @@ func (it *ContractsLogRemoveFromTopValidatorsIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogRemoveFromTopValidators)
+		it.Event = new(ValidatorsLogRemoveFromTopValidators)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1876,19 +1876,19 @@ func (it *ContractsLogRemoveFromTopValidatorsIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogRemoveFromTopValidatorsIterator) Error() error {
+func (it *ValidatorsLogRemoveFromTopValidatorsIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogRemoveFromTopValidatorsIterator) Close() error {
+func (it *ValidatorsLogRemoveFromTopValidatorsIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogRemoveFromTopValidators represents a LogRemoveFromTopValidators event raised by the Contracts contract.
-type ContractsLogRemoveFromTopValidators struct {
+// ValidatorsLogRemoveFromTopValidators represents a LogRemoveFromTopValidators event raised by the Validators contract.
+type ValidatorsLogRemoveFromTopValidators struct {
 	Val  common.Address
 	Time *big.Int
 	Raw  types.Log // Blockchain specific contextual infos
@@ -1897,31 +1897,31 @@ type ContractsLogRemoveFromTopValidators struct {
 // FilterLogRemoveFromTopValidators is a free log retrieval operation binding the contract event 0x7521e44559c870c316e84e60bc4785d9c034a8ab1d6acdce8134ac03f946c6ed.
 //
 // Solidity: event LogRemoveFromTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogRemoveFromTopValidators(opts *bind.FilterOpts, val []common.Address) (*ContractsLogRemoveFromTopValidatorsIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogRemoveFromTopValidators(opts *bind.FilterOpts, val []common.Address) (*ValidatorsLogRemoveFromTopValidatorsIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogRemoveFromTopValidators", valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogRemoveFromTopValidators", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogRemoveFromTopValidatorsIterator{contract: _Contracts.contract, event: "LogRemoveFromTopValidators", logs: logs, sub: sub}, nil
+	return &ValidatorsLogRemoveFromTopValidatorsIterator{contract: _Validators.contract, event: "LogRemoveFromTopValidators", logs: logs, sub: sub}, nil
 }
 
 // WatchLogRemoveFromTopValidators is a free log subscription operation binding the contract event 0x7521e44559c870c316e84e60bc4785d9c034a8ab1d6acdce8134ac03f946c6ed.
 //
 // Solidity: event LogRemoveFromTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogRemoveFromTopValidators(opts *bind.WatchOpts, sink chan<- *ContractsLogRemoveFromTopValidators, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogRemoveFromTopValidators(opts *bind.WatchOpts, sink chan<- *ValidatorsLogRemoveFromTopValidators, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogRemoveFromTopValidators", valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogRemoveFromTopValidators", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1931,8 +1931,8 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveFromTopValidators(opts *bind.
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogRemoveFromTopValidators)
-				if err := _Contracts.contract.UnpackLog(event, "LogRemoveFromTopValidators", log); err != nil {
+				event := new(ValidatorsLogRemoveFromTopValidators)
+				if err := _Validators.contract.UnpackLog(event, "LogRemoveFromTopValidators", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1956,18 +1956,18 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveFromTopValidators(opts *bind.
 // ParseLogRemoveFromTopValidators is a log parse operation binding the contract event 0x7521e44559c870c316e84e60bc4785d9c034a8ab1d6acdce8134ac03f946c6ed.
 //
 // Solidity: event LogRemoveFromTopValidators(address indexed val, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogRemoveFromTopValidators(log types.Log) (*ContractsLogRemoveFromTopValidators, error) {
-	event := new(ContractsLogRemoveFromTopValidators)
-	if err := _Contracts.contract.UnpackLog(event, "LogRemoveFromTopValidators", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogRemoveFromTopValidators(log types.Log) (*ValidatorsLogRemoveFromTopValidators, error) {
+	event := new(ValidatorsLogRemoveFromTopValidators)
+	if err := _Validators.contract.UnpackLog(event, "LogRemoveFromTopValidators", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogRemoveValidatorIterator is returned from FilterLogRemoveValidator and is used to iterate over the raw logs and unpacked data for LogRemoveValidator events raised by the Contracts contract.
-type ContractsLogRemoveValidatorIterator struct {
-	Event *ContractsLogRemoveValidator // Event containing the contract specifics and raw log
+// ValidatorsLogRemoveValidatorIterator is returned from FilterLogRemoveValidator and is used to iterate over the raw logs and unpacked data for LogRemoveValidator events raised by the Validators contract.
+type ValidatorsLogRemoveValidatorIterator struct {
+	Event *ValidatorsLogRemoveValidator // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1981,7 +1981,7 @@ type ContractsLogRemoveValidatorIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogRemoveValidatorIterator) Next() bool {
+func (it *ValidatorsLogRemoveValidatorIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1990,7 +1990,7 @@ func (it *ContractsLogRemoveValidatorIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogRemoveValidator)
+			it.Event = new(ValidatorsLogRemoveValidator)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2005,7 +2005,7 @@ func (it *ContractsLogRemoveValidatorIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogRemoveValidator)
+		it.Event = new(ValidatorsLogRemoveValidator)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2021,19 +2021,19 @@ func (it *ContractsLogRemoveValidatorIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogRemoveValidatorIterator) Error() error {
+func (it *ValidatorsLogRemoveValidatorIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogRemoveValidatorIterator) Close() error {
+func (it *ValidatorsLogRemoveValidatorIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogRemoveValidator represents a LogRemoveValidator event raised by the Contracts contract.
-type ContractsLogRemoveValidator struct {
+// ValidatorsLogRemoveValidator represents a LogRemoveValidator event raised by the Validators contract.
+type ValidatorsLogRemoveValidator struct {
 	Val  common.Address
 	Hb   *big.Int
 	Time *big.Int
@@ -2043,31 +2043,31 @@ type ContractsLogRemoveValidator struct {
 // FilterLogRemoveValidator is a free log retrieval operation binding the contract event 0xa26de7ab324eac08c596549f421e5c8741213d237d2e9a2c9c0ebde0a7a849fe.
 //
 // Solidity: event LogRemoveValidator(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogRemoveValidator(opts *bind.FilterOpts, val []common.Address) (*ContractsLogRemoveValidatorIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogRemoveValidator(opts *bind.FilterOpts, val []common.Address) (*ValidatorsLogRemoveValidatorIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogRemoveValidator", valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogRemoveValidator", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogRemoveValidatorIterator{contract: _Contracts.contract, event: "LogRemoveValidator", logs: logs, sub: sub}, nil
+	return &ValidatorsLogRemoveValidatorIterator{contract: _Validators.contract, event: "LogRemoveValidator", logs: logs, sub: sub}, nil
 }
 
 // WatchLogRemoveValidator is a free log subscription operation binding the contract event 0xa26de7ab324eac08c596549f421e5c8741213d237d2e9a2c9c0ebde0a7a849fe.
 //
 // Solidity: event LogRemoveValidator(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogRemoveValidator(opts *bind.WatchOpts, sink chan<- *ContractsLogRemoveValidator, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogRemoveValidator(opts *bind.WatchOpts, sink chan<- *ValidatorsLogRemoveValidator, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogRemoveValidator", valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogRemoveValidator", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2077,8 +2077,8 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveValidator(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogRemoveValidator)
-				if err := _Contracts.contract.UnpackLog(event, "LogRemoveValidator", log); err != nil {
+				event := new(ValidatorsLogRemoveValidator)
+				if err := _Validators.contract.UnpackLog(event, "LogRemoveValidator", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2102,18 +2102,18 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveValidator(opts *bind.WatchOpt
 // ParseLogRemoveValidator is a log parse operation binding the contract event 0xa26de7ab324eac08c596549f421e5c8741213d237d2e9a2c9c0ebde0a7a849fe.
 //
 // Solidity: event LogRemoveValidator(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogRemoveValidator(log types.Log) (*ContractsLogRemoveValidator, error) {
-	event := new(ContractsLogRemoveValidator)
-	if err := _Contracts.contract.UnpackLog(event, "LogRemoveValidator", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogRemoveValidator(log types.Log) (*ValidatorsLogRemoveValidator, error) {
+	event := new(ValidatorsLogRemoveValidator)
+	if err := _Validators.contract.UnpackLog(event, "LogRemoveValidator", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogRemoveValidatorIncomingIterator is returned from FilterLogRemoveValidatorIncoming and is used to iterate over the raw logs and unpacked data for LogRemoveValidatorIncoming events raised by the Contracts contract.
-type ContractsLogRemoveValidatorIncomingIterator struct {
-	Event *ContractsLogRemoveValidatorIncoming // Event containing the contract specifics and raw log
+// ValidatorsLogRemoveValidatorIncomingIterator is returned from FilterLogRemoveValidatorIncoming and is used to iterate over the raw logs and unpacked data for LogRemoveValidatorIncoming events raised by the Validators contract.
+type ValidatorsLogRemoveValidatorIncomingIterator struct {
+	Event *ValidatorsLogRemoveValidatorIncoming // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2127,7 +2127,7 @@ type ContractsLogRemoveValidatorIncomingIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogRemoveValidatorIncomingIterator) Next() bool {
+func (it *ValidatorsLogRemoveValidatorIncomingIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2136,7 +2136,7 @@ func (it *ContractsLogRemoveValidatorIncomingIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogRemoveValidatorIncoming)
+			it.Event = new(ValidatorsLogRemoveValidatorIncoming)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2151,7 +2151,7 @@ func (it *ContractsLogRemoveValidatorIncomingIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogRemoveValidatorIncoming)
+		it.Event = new(ValidatorsLogRemoveValidatorIncoming)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2167,19 +2167,19 @@ func (it *ContractsLogRemoveValidatorIncomingIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogRemoveValidatorIncomingIterator) Error() error {
+func (it *ValidatorsLogRemoveValidatorIncomingIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogRemoveValidatorIncomingIterator) Close() error {
+func (it *ValidatorsLogRemoveValidatorIncomingIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogRemoveValidatorIncoming represents a LogRemoveValidatorIncoming event raised by the Contracts contract.
-type ContractsLogRemoveValidatorIncoming struct {
+// ValidatorsLogRemoveValidatorIncoming represents a LogRemoveValidatorIncoming event raised by the Validators contract.
+type ValidatorsLogRemoveValidatorIncoming struct {
 	Val  common.Address
 	Hb   *big.Int
 	Time *big.Int
@@ -2189,31 +2189,31 @@ type ContractsLogRemoveValidatorIncoming struct {
 // FilterLogRemoveValidatorIncoming is a free log retrieval operation binding the contract event 0xe294e9d73f8eee23e21b2e1567960625a6b5d339cb127b55d0d09473a9951235.
 //
 // Solidity: event LogRemoveValidatorIncoming(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogRemoveValidatorIncoming(opts *bind.FilterOpts, val []common.Address) (*ContractsLogRemoveValidatorIncomingIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogRemoveValidatorIncoming(opts *bind.FilterOpts, val []common.Address) (*ValidatorsLogRemoveValidatorIncomingIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogRemoveValidatorIncoming", valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogRemoveValidatorIncoming", valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogRemoveValidatorIncomingIterator{contract: _Contracts.contract, event: "LogRemoveValidatorIncoming", logs: logs, sub: sub}, nil
+	return &ValidatorsLogRemoveValidatorIncomingIterator{contract: _Validators.contract, event: "LogRemoveValidatorIncoming", logs: logs, sub: sub}, nil
 }
 
 // WatchLogRemoveValidatorIncoming is a free log subscription operation binding the contract event 0xe294e9d73f8eee23e21b2e1567960625a6b5d339cb127b55d0d09473a9951235.
 //
 // Solidity: event LogRemoveValidatorIncoming(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogRemoveValidatorIncoming(opts *bind.WatchOpts, sink chan<- *ContractsLogRemoveValidatorIncoming, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogRemoveValidatorIncoming(opts *bind.WatchOpts, sink chan<- *ValidatorsLogRemoveValidatorIncoming, val []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogRemoveValidatorIncoming", valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogRemoveValidatorIncoming", valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2223,8 +2223,8 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveValidatorIncoming(opts *bind.
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogRemoveValidatorIncoming)
-				if err := _Contracts.contract.UnpackLog(event, "LogRemoveValidatorIncoming", log); err != nil {
+				event := new(ValidatorsLogRemoveValidatorIncoming)
+				if err := _Validators.contract.UnpackLog(event, "LogRemoveValidatorIncoming", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2248,18 +2248,18 @@ func (_Contracts *ContractsFilterer) WatchLogRemoveValidatorIncoming(opts *bind.
 // ParseLogRemoveValidatorIncoming is a log parse operation binding the contract event 0xe294e9d73f8eee23e21b2e1567960625a6b5d339cb127b55d0d09473a9951235.
 //
 // Solidity: event LogRemoveValidatorIncoming(address indexed val, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogRemoveValidatorIncoming(log types.Log) (*ContractsLogRemoveValidatorIncoming, error) {
-	event := new(ContractsLogRemoveValidatorIncoming)
-	if err := _Contracts.contract.UnpackLog(event, "LogRemoveValidatorIncoming", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogRemoveValidatorIncoming(log types.Log) (*ValidatorsLogRemoveValidatorIncoming, error) {
+	event := new(ValidatorsLogRemoveValidatorIncoming)
+	if err := _Validators.contract.UnpackLog(event, "LogRemoveValidatorIncoming", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogStakeIterator is returned from FilterLogStake and is used to iterate over the raw logs and unpacked data for LogStake events raised by the Contracts contract.
-type ContractsLogStakeIterator struct {
-	Event *ContractsLogStake // Event containing the contract specifics and raw log
+// ValidatorsLogStakeIterator is returned from FilterLogStake and is used to iterate over the raw logs and unpacked data for LogStake events raised by the Validators contract.
+type ValidatorsLogStakeIterator struct {
+	Event *ValidatorsLogStake // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2273,7 +2273,7 @@ type ContractsLogStakeIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogStakeIterator) Next() bool {
+func (it *ValidatorsLogStakeIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2282,7 +2282,7 @@ func (it *ContractsLogStakeIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogStake)
+			it.Event = new(ValidatorsLogStake)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2297,7 +2297,7 @@ func (it *ContractsLogStakeIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogStake)
+		it.Event = new(ValidatorsLogStake)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2313,19 +2313,19 @@ func (it *ContractsLogStakeIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogStakeIterator) Error() error {
+func (it *ValidatorsLogStakeIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogStakeIterator) Close() error {
+func (it *ValidatorsLogStakeIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogStake represents a LogStake event raised by the Contracts contract.
-type ContractsLogStake struct {
+// ValidatorsLogStake represents a LogStake event raised by the Validators contract.
+type ValidatorsLogStake struct {
 	Staker  common.Address
 	Val     common.Address
 	Staking *big.Int
@@ -2336,7 +2336,7 @@ type ContractsLogStake struct {
 // FilterLogStake is a free log retrieval operation binding the contract event 0xb9ba725934532316cffe10975da6eb25ad49c2d1c294d982c46c9f8d684ee075.
 //
 // Solidity: event LogStake(address indexed staker, address indexed val, uint256 staking, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogStake(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ContractsLogStakeIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogStake(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ValidatorsLogStakeIterator, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2347,17 +2347,17 @@ func (_Contracts *ContractsFilterer) FilterLogStake(opts *bind.FilterOpts, stake
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogStake", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogStake", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogStakeIterator{contract: _Contracts.contract, event: "LogStake", logs: logs, sub: sub}, nil
+	return &ValidatorsLogStakeIterator{contract: _Validators.contract, event: "LogStake", logs: logs, sub: sub}, nil
 }
 
 // WatchLogStake is a free log subscription operation binding the contract event 0xb9ba725934532316cffe10975da6eb25ad49c2d1c294d982c46c9f8d684ee075.
 //
 // Solidity: event LogStake(address indexed staker, address indexed val, uint256 staking, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogStake(opts *bind.WatchOpts, sink chan<- *ContractsLogStake, staker []common.Address, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogStake(opts *bind.WatchOpts, sink chan<- *ValidatorsLogStake, staker []common.Address, val []common.Address) (event.Subscription, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2368,7 +2368,7 @@ func (_Contracts *ContractsFilterer) WatchLogStake(opts *bind.WatchOpts, sink ch
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogStake", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogStake", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2378,8 +2378,8 @@ func (_Contracts *ContractsFilterer) WatchLogStake(opts *bind.WatchOpts, sink ch
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogStake)
-				if err := _Contracts.contract.UnpackLog(event, "LogStake", log); err != nil {
+				event := new(ValidatorsLogStake)
+				if err := _Validators.contract.UnpackLog(event, "LogStake", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2403,18 +2403,18 @@ func (_Contracts *ContractsFilterer) WatchLogStake(opts *bind.WatchOpts, sink ch
 // ParseLogStake is a log parse operation binding the contract event 0xb9ba725934532316cffe10975da6eb25ad49c2d1c294d982c46c9f8d684ee075.
 //
 // Solidity: event LogStake(address indexed staker, address indexed val, uint256 staking, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogStake(log types.Log) (*ContractsLogStake, error) {
-	event := new(ContractsLogStake)
-	if err := _Contracts.contract.UnpackLog(event, "LogStake", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogStake(log types.Log) (*ValidatorsLogStake, error) {
+	event := new(ValidatorsLogStake)
+	if err := _Validators.contract.UnpackLog(event, "LogStake", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogUnstakeIterator is returned from FilterLogUnstake and is used to iterate over the raw logs and unpacked data for LogUnstake events raised by the Contracts contract.
-type ContractsLogUnstakeIterator struct {
-	Event *ContractsLogUnstake // Event containing the contract specifics and raw log
+// ValidatorsLogUnstakeIterator is returned from FilterLogUnstake and is used to iterate over the raw logs and unpacked data for LogUnstake events raised by the Validators contract.
+type ValidatorsLogUnstakeIterator struct {
+	Event *ValidatorsLogUnstake // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2428,7 +2428,7 @@ type ContractsLogUnstakeIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogUnstakeIterator) Next() bool {
+func (it *ValidatorsLogUnstakeIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2437,7 +2437,7 @@ func (it *ContractsLogUnstakeIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogUnstake)
+			it.Event = new(ValidatorsLogUnstake)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2452,7 +2452,7 @@ func (it *ContractsLogUnstakeIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogUnstake)
+		it.Event = new(ValidatorsLogUnstake)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2468,19 +2468,19 @@ func (it *ContractsLogUnstakeIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogUnstakeIterator) Error() error {
+func (it *ValidatorsLogUnstakeIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogUnstakeIterator) Close() error {
+func (it *ValidatorsLogUnstakeIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogUnstake represents a LogUnstake event raised by the Contracts contract.
-type ContractsLogUnstake struct {
+// ValidatorsLogUnstake represents a LogUnstake event raised by the Validators contract.
+type ValidatorsLogUnstake struct {
 	Staker common.Address
 	Val    common.Address
 	Amount *big.Int
@@ -2491,7 +2491,7 @@ type ContractsLogUnstake struct {
 // FilterLogUnstake is a free log retrieval operation binding the contract event 0x449002ae18e748d69a55f38514400d64f966492e593e32d6e9b8b24db98a0bc1.
 //
 // Solidity: event LogUnstake(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogUnstake(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ContractsLogUnstakeIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogUnstake(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ValidatorsLogUnstakeIterator, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2502,17 +2502,17 @@ func (_Contracts *ContractsFilterer) FilterLogUnstake(opts *bind.FilterOpts, sta
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogUnstake", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogUnstake", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogUnstakeIterator{contract: _Contracts.contract, event: "LogUnstake", logs: logs, sub: sub}, nil
+	return &ValidatorsLogUnstakeIterator{contract: _Validators.contract, event: "LogUnstake", logs: logs, sub: sub}, nil
 }
 
 // WatchLogUnstake is a free log subscription operation binding the contract event 0x449002ae18e748d69a55f38514400d64f966492e593e32d6e9b8b24db98a0bc1.
 //
 // Solidity: event LogUnstake(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogUnstake(opts *bind.WatchOpts, sink chan<- *ContractsLogUnstake, staker []common.Address, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogUnstake(opts *bind.WatchOpts, sink chan<- *ValidatorsLogUnstake, staker []common.Address, val []common.Address) (event.Subscription, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2523,7 +2523,7 @@ func (_Contracts *ContractsFilterer) WatchLogUnstake(opts *bind.WatchOpts, sink 
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogUnstake", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogUnstake", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2533,8 +2533,8 @@ func (_Contracts *ContractsFilterer) WatchLogUnstake(opts *bind.WatchOpts, sink 
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogUnstake)
-				if err := _Contracts.contract.UnpackLog(event, "LogUnstake", log); err != nil {
+				event := new(ValidatorsLogUnstake)
+				if err := _Validators.contract.UnpackLog(event, "LogUnstake", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2558,18 +2558,18 @@ func (_Contracts *ContractsFilterer) WatchLogUnstake(opts *bind.WatchOpts, sink 
 // ParseLogUnstake is a log parse operation binding the contract event 0x449002ae18e748d69a55f38514400d64f966492e593e32d6e9b8b24db98a0bc1.
 //
 // Solidity: event LogUnstake(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogUnstake(log types.Log) (*ContractsLogUnstake, error) {
-	event := new(ContractsLogUnstake)
-	if err := _Contracts.contract.UnpackLog(event, "LogUnstake", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogUnstake(log types.Log) (*ValidatorsLogUnstake, error) {
+	event := new(ValidatorsLogUnstake)
+	if err := _Validators.contract.UnpackLog(event, "LogUnstake", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogUpdateValidatorIterator is returned from FilterLogUpdateValidator and is used to iterate over the raw logs and unpacked data for LogUpdateValidator events raised by the Contracts contract.
-type ContractsLogUpdateValidatorIterator struct {
-	Event *ContractsLogUpdateValidator // Event containing the contract specifics and raw log
+// ValidatorsLogUpdateValidatorIterator is returned from FilterLogUpdateValidator and is used to iterate over the raw logs and unpacked data for LogUpdateValidator events raised by the Validators contract.
+type ValidatorsLogUpdateValidatorIterator struct {
+	Event *ValidatorsLogUpdateValidator // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2583,7 +2583,7 @@ type ContractsLogUpdateValidatorIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogUpdateValidatorIterator) Next() bool {
+func (it *ValidatorsLogUpdateValidatorIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2592,7 +2592,7 @@ func (it *ContractsLogUpdateValidatorIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogUpdateValidator)
+			it.Event = new(ValidatorsLogUpdateValidator)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2607,7 +2607,7 @@ func (it *ContractsLogUpdateValidatorIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogUpdateValidator)
+		it.Event = new(ValidatorsLogUpdateValidator)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2623,19 +2623,19 @@ func (it *ContractsLogUpdateValidatorIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogUpdateValidatorIterator) Error() error {
+func (it *ValidatorsLogUpdateValidatorIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogUpdateValidatorIterator) Close() error {
+func (it *ValidatorsLogUpdateValidatorIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogUpdateValidator represents a LogUpdateValidator event raised by the Contracts contract.
-type ContractsLogUpdateValidator struct {
+// ValidatorsLogUpdateValidator represents a LogUpdateValidator event raised by the Validators contract.
+type ValidatorsLogUpdateValidator struct {
 	NewSet []common.Address
 	Raw    types.Log // Blockchain specific contextual infos
 }
@@ -2643,21 +2643,21 @@ type ContractsLogUpdateValidator struct {
 // FilterLogUpdateValidator is a free log retrieval operation binding the contract event 0xeacea8f3c22f06c0b18306bdb04d0a967255129e8ce0094debb0a0ff89d006b5.
 //
 // Solidity: event LogUpdateValidator(address[] newSet)
-func (_Contracts *ContractsFilterer) FilterLogUpdateValidator(opts *bind.FilterOpts) (*ContractsLogUpdateValidatorIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogUpdateValidator(opts *bind.FilterOpts) (*ValidatorsLogUpdateValidatorIterator, error) {
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogUpdateValidator")
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogUpdateValidator")
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogUpdateValidatorIterator{contract: _Contracts.contract, event: "LogUpdateValidator", logs: logs, sub: sub}, nil
+	return &ValidatorsLogUpdateValidatorIterator{contract: _Validators.contract, event: "LogUpdateValidator", logs: logs, sub: sub}, nil
 }
 
 // WatchLogUpdateValidator is a free log subscription operation binding the contract event 0xeacea8f3c22f06c0b18306bdb04d0a967255129e8ce0094debb0a0ff89d006b5.
 //
 // Solidity: event LogUpdateValidator(address[] newSet)
-func (_Contracts *ContractsFilterer) WatchLogUpdateValidator(opts *bind.WatchOpts, sink chan<- *ContractsLogUpdateValidator) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogUpdateValidator(opts *bind.WatchOpts, sink chan<- *ValidatorsLogUpdateValidator) (event.Subscription, error) {
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogUpdateValidator")
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogUpdateValidator")
 	if err != nil {
 		return nil, err
 	}
@@ -2667,8 +2667,8 @@ func (_Contracts *ContractsFilterer) WatchLogUpdateValidator(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogUpdateValidator)
-				if err := _Contracts.contract.UnpackLog(event, "LogUpdateValidator", log); err != nil {
+				event := new(ValidatorsLogUpdateValidator)
+				if err := _Validators.contract.UnpackLog(event, "LogUpdateValidator", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2692,18 +2692,18 @@ func (_Contracts *ContractsFilterer) WatchLogUpdateValidator(opts *bind.WatchOpt
 // ParseLogUpdateValidator is a log parse operation binding the contract event 0xeacea8f3c22f06c0b18306bdb04d0a967255129e8ce0094debb0a0ff89d006b5.
 //
 // Solidity: event LogUpdateValidator(address[] newSet)
-func (_Contracts *ContractsFilterer) ParseLogUpdateValidator(log types.Log) (*ContractsLogUpdateValidator, error) {
-	event := new(ContractsLogUpdateValidator)
-	if err := _Contracts.contract.UnpackLog(event, "LogUpdateValidator", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogUpdateValidator(log types.Log) (*ValidatorsLogUpdateValidator, error) {
+	event := new(ValidatorsLogUpdateValidator)
+	if err := _Validators.contract.UnpackLog(event, "LogUpdateValidator", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogWithdrawProfitsIterator is returned from FilterLogWithdrawProfits and is used to iterate over the raw logs and unpacked data for LogWithdrawProfits events raised by the Contracts contract.
-type ContractsLogWithdrawProfitsIterator struct {
-	Event *ContractsLogWithdrawProfits // Event containing the contract specifics and raw log
+// ValidatorsLogWithdrawProfitsIterator is returned from FilterLogWithdrawProfits and is used to iterate over the raw logs and unpacked data for LogWithdrawProfits events raised by the Validators contract.
+type ValidatorsLogWithdrawProfitsIterator struct {
+	Event *ValidatorsLogWithdrawProfits // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2717,7 +2717,7 @@ type ContractsLogWithdrawProfitsIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogWithdrawProfitsIterator) Next() bool {
+func (it *ValidatorsLogWithdrawProfitsIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2726,7 +2726,7 @@ func (it *ContractsLogWithdrawProfitsIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogWithdrawProfits)
+			it.Event = new(ValidatorsLogWithdrawProfits)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2741,7 +2741,7 @@ func (it *ContractsLogWithdrawProfitsIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogWithdrawProfits)
+		it.Event = new(ValidatorsLogWithdrawProfits)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2757,19 +2757,19 @@ func (it *ContractsLogWithdrawProfitsIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogWithdrawProfitsIterator) Error() error {
+func (it *ValidatorsLogWithdrawProfitsIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogWithdrawProfitsIterator) Close() error {
+func (it *ValidatorsLogWithdrawProfitsIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogWithdrawProfits represents a LogWithdrawProfits event raised by the Contracts contract.
-type ContractsLogWithdrawProfits struct {
+// ValidatorsLogWithdrawProfits represents a LogWithdrawProfits event raised by the Validators contract.
+type ValidatorsLogWithdrawProfits struct {
 	Val  common.Address
 	Fee  common.Address
 	Hb   *big.Int
@@ -2780,7 +2780,7 @@ type ContractsLogWithdrawProfits struct {
 // FilterLogWithdrawProfits is a free log retrieval operation binding the contract event 0x51a69b4502f660774c9339825c7b5adbf0b8622289134647e29728ec5d9b3bb9.
 //
 // Solidity: event LogWithdrawProfits(address indexed val, address indexed fee, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogWithdrawProfits(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ContractsLogWithdrawProfitsIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogWithdrawProfits(opts *bind.FilterOpts, val []common.Address, fee []common.Address) (*ValidatorsLogWithdrawProfitsIterator, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -2791,17 +2791,17 @@ func (_Contracts *ContractsFilterer) FilterLogWithdrawProfits(opts *bind.FilterO
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogWithdrawProfits", valRule, feeRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogWithdrawProfits", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogWithdrawProfitsIterator{contract: _Contracts.contract, event: "LogWithdrawProfits", logs: logs, sub: sub}, nil
+	return &ValidatorsLogWithdrawProfitsIterator{contract: _Validators.contract, event: "LogWithdrawProfits", logs: logs, sub: sub}, nil
 }
 
 // WatchLogWithdrawProfits is a free log subscription operation binding the contract event 0x51a69b4502f660774c9339825c7b5adbf0b8622289134647e29728ec5d9b3bb9.
 //
 // Solidity: event LogWithdrawProfits(address indexed val, address indexed fee, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogWithdrawProfits(opts *bind.WatchOpts, sink chan<- *ContractsLogWithdrawProfits, val []common.Address, fee []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogWithdrawProfits(opts *bind.WatchOpts, sink chan<- *ValidatorsLogWithdrawProfits, val []common.Address, fee []common.Address) (event.Subscription, error) {
 
 	var valRule []interface{}
 	for _, valItem := range val {
@@ -2812,7 +2812,7 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawProfits(opts *bind.WatchOpt
 		feeRule = append(feeRule, feeItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogWithdrawProfits", valRule, feeRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogWithdrawProfits", valRule, feeRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2822,8 +2822,8 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawProfits(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogWithdrawProfits)
-				if err := _Contracts.contract.UnpackLog(event, "LogWithdrawProfits", log); err != nil {
+				event := new(ValidatorsLogWithdrawProfits)
+				if err := _Validators.contract.UnpackLog(event, "LogWithdrawProfits", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2847,18 +2847,18 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawProfits(opts *bind.WatchOpt
 // ParseLogWithdrawProfits is a log parse operation binding the contract event 0x51a69b4502f660774c9339825c7b5adbf0b8622289134647e29728ec5d9b3bb9.
 //
 // Solidity: event LogWithdrawProfits(address indexed val, address indexed fee, uint256 hb, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogWithdrawProfits(log types.Log) (*ContractsLogWithdrawProfits, error) {
-	event := new(ContractsLogWithdrawProfits)
-	if err := _Contracts.contract.UnpackLog(event, "LogWithdrawProfits", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogWithdrawProfits(log types.Log) (*ValidatorsLogWithdrawProfits, error) {
+	event := new(ValidatorsLogWithdrawProfits)
+	if err := _Validators.contract.UnpackLog(event, "LogWithdrawProfits", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// ContractsLogWithdrawStakingIterator is returned from FilterLogWithdrawStaking and is used to iterate over the raw logs and unpacked data for LogWithdrawStaking events raised by the Contracts contract.
-type ContractsLogWithdrawStakingIterator struct {
-	Event *ContractsLogWithdrawStaking // Event containing the contract specifics and raw log
+// ValidatorsLogWithdrawStakingIterator is returned from FilterLogWithdrawStaking and is used to iterate over the raw logs and unpacked data for LogWithdrawStaking events raised by the Validators contract.
+type ValidatorsLogWithdrawStakingIterator struct {
+	Event *ValidatorsLogWithdrawStaking // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2872,7 +2872,7 @@ type ContractsLogWithdrawStakingIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *ContractsLogWithdrawStakingIterator) Next() bool {
+func (it *ValidatorsLogWithdrawStakingIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2881,7 +2881,7 @@ func (it *ContractsLogWithdrawStakingIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(ContractsLogWithdrawStaking)
+			it.Event = new(ValidatorsLogWithdrawStaking)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2896,7 +2896,7 @@ func (it *ContractsLogWithdrawStakingIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(ContractsLogWithdrawStaking)
+		it.Event = new(ValidatorsLogWithdrawStaking)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2912,19 +2912,19 @@ func (it *ContractsLogWithdrawStakingIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *ContractsLogWithdrawStakingIterator) Error() error {
+func (it *ValidatorsLogWithdrawStakingIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *ContractsLogWithdrawStakingIterator) Close() error {
+func (it *ValidatorsLogWithdrawStakingIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// ContractsLogWithdrawStaking represents a LogWithdrawStaking event raised by the Contracts contract.
-type ContractsLogWithdrawStaking struct {
+// ValidatorsLogWithdrawStaking represents a LogWithdrawStaking event raised by the Validators contract.
+type ValidatorsLogWithdrawStaking struct {
 	Staker common.Address
 	Val    common.Address
 	Amount *big.Int
@@ -2935,7 +2935,7 @@ type ContractsLogWithdrawStaking struct {
 // FilterLogWithdrawStaking is a free log retrieval operation binding the contract event 0xa70cd94070cd852339a76b32cf2d95a3c8f2a322269163d276071c1c14955619.
 //
 // Solidity: event LogWithdrawStaking(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) FilterLogWithdrawStaking(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ContractsLogWithdrawStakingIterator, error) {
+func (_Validators *ValidatorsFilterer) FilterLogWithdrawStaking(opts *bind.FilterOpts, staker []common.Address, val []common.Address) (*ValidatorsLogWithdrawStakingIterator, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2946,17 +2946,17 @@ func (_Contracts *ContractsFilterer) FilterLogWithdrawStaking(opts *bind.FilterO
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.FilterLogs(opts, "LogWithdrawStaking", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.FilterLogs(opts, "LogWithdrawStaking", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
-	return &ContractsLogWithdrawStakingIterator{contract: _Contracts.contract, event: "LogWithdrawStaking", logs: logs, sub: sub}, nil
+	return &ValidatorsLogWithdrawStakingIterator{contract: _Validators.contract, event: "LogWithdrawStaking", logs: logs, sub: sub}, nil
 }
 
 // WatchLogWithdrawStaking is a free log subscription operation binding the contract event 0xa70cd94070cd852339a76b32cf2d95a3c8f2a322269163d276071c1c14955619.
 //
 // Solidity: event LogWithdrawStaking(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) WatchLogWithdrawStaking(opts *bind.WatchOpts, sink chan<- *ContractsLogWithdrawStaking, staker []common.Address, val []common.Address) (event.Subscription, error) {
+func (_Validators *ValidatorsFilterer) WatchLogWithdrawStaking(opts *bind.WatchOpts, sink chan<- *ValidatorsLogWithdrawStaking, staker []common.Address, val []common.Address) (event.Subscription, error) {
 
 	var stakerRule []interface{}
 	for _, stakerItem := range staker {
@@ -2967,7 +2967,7 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawStaking(opts *bind.WatchOpt
 		valRule = append(valRule, valItem)
 	}
 
-	logs, sub, err := _Contracts.contract.WatchLogs(opts, "LogWithdrawStaking", stakerRule, valRule)
+	logs, sub, err := _Validators.contract.WatchLogs(opts, "LogWithdrawStaking", stakerRule, valRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2977,8 +2977,8 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawStaking(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(ContractsLogWithdrawStaking)
-				if err := _Contracts.contract.UnpackLog(event, "LogWithdrawStaking", log); err != nil {
+				event := new(ValidatorsLogWithdrawStaking)
+				if err := _Validators.contract.UnpackLog(event, "LogWithdrawStaking", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -3002,9 +3002,9 @@ func (_Contracts *ContractsFilterer) WatchLogWithdrawStaking(opts *bind.WatchOpt
 // ParseLogWithdrawStaking is a log parse operation binding the contract event 0xa70cd94070cd852339a76b32cf2d95a3c8f2a322269163d276071c1c14955619.
 //
 // Solidity: event LogWithdrawStaking(address indexed staker, address indexed val, uint256 amount, uint256 time)
-func (_Contracts *ContractsFilterer) ParseLogWithdrawStaking(log types.Log) (*ContractsLogWithdrawStaking, error) {
-	event := new(ContractsLogWithdrawStaking)
-	if err := _Contracts.contract.UnpackLog(event, "LogWithdrawStaking", log); err != nil {
+func (_Validators *ValidatorsFilterer) ParseLogWithdrawStaking(log types.Log) (*ValidatorsLogWithdrawStaking, error) {
+	event := new(ValidatorsLogWithdrawStaking)
+	if err := _Validators.contract.UnpackLog(event, "LogWithdrawStaking", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
