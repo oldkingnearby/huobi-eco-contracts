@@ -33,12 +33,20 @@ contract MockValidators {
 
         return false;
     }
-
+	//remove warnings
     function setUnpassed(address who) public {
-        proposal.setUnpassed(who);
+    	if (who == address(0)){
+			proposal.setUnpassed(who);
+		}else{
+			proposal.setUnpassed(who);
+		}
     }
-
-    function tryReactive(address who) public returns (bool) {
-        return true;
+	//remove warnings
+    function tryReactive(address who) public pure returns (bool) {
+    	if (who == address(0)){
+			return true;
+		}else{
+			return true;
+		}
     }
 }
