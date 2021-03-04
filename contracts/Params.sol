@@ -1,15 +1,15 @@
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity ^0.6.0;
 
 contract Params {
     bool public initialized;
 
     // System contracts
     address
-        public constant ValidatorContractAddr = 0x000000000000000000000000000000000000f000;
+        public constant ValidatorContractAddr = 0x0000000000000000000000000000000000001111;
     address
-        public constant PunishContractAddr = 0x000000000000000000000000000000000000F001;
+        public constant PunishContractAddr = 0x0000000000000000000000000000000000002222;
     address
-        public constant ProposalAddr = 0x000000000000000000000000000000000000F002;
+        public constant ProposalAddr = 0x0000000000000000000000000000000000003333;
 
     // System params
     uint16 public constant MaxValidators = 21;
